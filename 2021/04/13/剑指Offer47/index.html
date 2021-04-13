@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MySQL索引, Icedancemelody">
+    <meta name="keywords" content="剑指Offer47, Icedancemelody">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>MySQL索引 | Icedancemelody</title>
+    <title>剑指Offer47 | Icedancemelody</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">MySQL索引</h1>
+                    <h1 class="description center-align post-title">剑指Offer47</h1>
                 </div>
             </div>
         </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/MySQL/" class="post-category">
-                                MySQL
+                            <a href="/categories/leetcode/" class="post-category">
+                                leetcode
                             </a>
                         
                     </div>
@@ -477,7 +477,22 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <h2 id="剑指-Offer-47-礼物的最大价值"><a href="#剑指-Offer-47-礼物的最大价值" class="headerlink" title="剑指 Offer 47. 礼物的最大价值"></a>剑指 Offer 47. 礼物的最大价值</h2><p>本题是经典的动态规划思想解题，想得到的结果可以从上一个子问题推出。假设输入矩阵名为sum,长n,高 m.</p>
+<h3 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h3><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><ul>
+<li>dp数组，与输入矩阵等大</li>
+</ul>
+<h4 id="递推公式"><a href="#递推公式" class="headerlink" title="递推公式"></a>递推公式</h4><p>由题可知，矩阵中（i,j）位置只能从左（i - 1，j）和上（i, j - 1）抵达，自然推出递推公式为：</p>
+<p>f(i , j) += Max(f (i - 1, j) , f (i , j -1))</p>
+<p>当遍历指针位于第一行或者第一列时，不用考虑Max情况。</p>
+<h4 id="返回"><a href="#返回" class="headerlink" title="返回"></a>返回</h4><p>返回数组右下角的值。</p>
+<h4 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h4><p>时间复杂度：o(mn),因为要遍历所有矩阵值</p>
+<p>空间复杂度：o(mn)因开辟等大dp数组</p>
+<h3 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h3><p>方法2在方法1的基础上简化，由于f(i ,j)只与前两个值有关，并且并不会使用到前面的值，则可以在原输入数组上进行原地修改，将空间复杂度简化为o(1)。</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int maxValue(int[][] grid) &#123;</span><br><span class="line">       &#x2F;&#x2F;初始化</span><br><span class="line">       int m &#x3D; grid.length, n &#x3D; grid[0].length;</span><br><span class="line">       for(int i &#x3D; 0; i &lt; m; i++) &#123;</span><br><span class="line">           for(int j &#x3D; 0; j &lt; n; j++) &#123;</span><br><span class="line">               if(i &#x3D;&#x3D; 0 &amp;&amp; j &#x3D;&#x3D; 0) continue;</span><br><span class="line">               else if(i &#x3D;&#x3D; 0) &#123;</span><br><span class="line">                   grid[i][j] +&#x3D; grid[i][j - 1];</span><br><span class="line">               &#125;</span><br><span class="line">               else if(j &#x3D;&#x3D; 0) &#123;</span><br><span class="line">                   grid[i][j] +&#x3D; grid[i - 1][j];</span><br><span class="line">               &#125;</span><br><span class="line">               else &#123;</span><br><span class="line">                   grid[i][j] +&#x3D; Math.max(grid[i - 1][j], grid[i][j - 1]);</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       return grid[m - 1][n - 1];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
                 
             </div>
             <hr/>
@@ -503,7 +518,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/04/13/TagEditText/">http://example.com/2021/04/13/TagEditText/</a>
+                    <a href="http://example.com/2021/04/13/%E5%89%91%E6%8C%87Offer47/">http://example.com/2021/04/13/%E5%89%91%E6%8C%87Offer47/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -714,18 +729,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2021/04/13/TagEditText/">
+                <a href="/2021/04/13/Spring%E5%88%9D%E8%A7%81/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="MySQL索引">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Spring初见">
                         
-                        <span class="card-title">MySQL索引</span>
+                        <span class="card-title">Spring初见</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -735,22 +749,21 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-13
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-13
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/MySQL/" class="post-category">
-                                    MySQL
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -769,13 +782,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/13/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9B%B8%E5%85%B3/">
+                <a href="/2021/04/13/Java%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E5%88%9D%E6%8E%A2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="操作系统相关">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Java方法执行内存分配初探">
                         
-                        <span class="card-title">操作系统相关</span>
+                        <span class="card-title">Java方法执行内存分配初探</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -792,8 +805,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
-                                    操作系统
+                            <a href="/categories/JavaBasic/" class="post-category">
+                                    JavaBasic
                                 </a>
                             
                             
