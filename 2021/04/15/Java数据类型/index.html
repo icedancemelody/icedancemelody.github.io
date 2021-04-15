@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Spring初见, Icedancemelody">
+    <meta name="keywords" content="Java数据类型, Icedancemelody">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Spring初见 | Icedancemelody</title>
+    <title>Java数据类型 | Icedancemelody</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Spring初见</h1>
+                    <h1 class="description center-align post-title">Java数据类型</h1>
                 </div>
             </div>
         </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Spring/" class="post-category">
-                                Spring
+                            <a href="/categories/JavaBasic/" class="post-category">
+                                JavaBasic
                             </a>
                         
                     </div>
@@ -456,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-04-13
+                    2021-04-15
                 </div>
                 
 
@@ -477,34 +477,23 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Spring简介"><a href="#Spring简介" class="headerlink" title="Spring简介"></a>Spring简介</h1><ul>
-<li>spring是为了解决企业开发的复杂性，任何java应用都可以使用。</li>
-</ul>
-<h2 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h2><p><img src="https://ice-tongji.oss-cn-beijing.aliyuncs.com/img/image-20210413164120146.png" alt="image-20210413164120146"></p>
-<p>七大模块</p>
+                <h2 id="Java数据类型"><a href="#Java数据类型" class="headerlink" title="Java数据类型"></a>Java数据类型</h2><p>数据类型是指一组值和一组对这些值操作的<strong>集合</strong>。在Java中分为原始数据类型，和引用数据类型。</p>
+<h3 id="原始数据类型"><a href="#原始数据类型" class="headerlink" title="原始数据类型"></a>原始数据类型</h3><p>比如说：int（32位），float（单精度32位），double（双精度64位），boolean（表示一位 ，只有两个值0，char（16位Unicode字符），byte（8位），short（16位），long(64位)。</p>
+<p>java编程中，主要使用class构造引用类型，这种风格也叫面向对象编程，对象——保存了某个数据类型的的值的实体。通过此 ，你还可以自己定义自己的数据类型来抽象任意对象。</p>
+<p>抽象数据类型ADT是一种能够对使用者隐藏数据表示的数据类型。（就是自己写类，定义自己的成员数据和对应API，这种类对使用者透明，只需要提供API即可）。</p>
+<h3 id="包装数据类型"><a href="#包装数据类型" class="headerlink" title="包装数据类型"></a>包装数据类型</h3><p>Java的自动装箱和自动拆箱机制：</p>
+<p>类型参数必须被实例化为引用类型，Java有一种特殊机制，可以让泛型代码能够处理原始数据类型。</p>
+<p>Java的封装类型都是<strong>原始数据类型所对应的引用数据类型</strong>，比如Integer——int。一般在数组初始化定义类型，使用Integer而不是用int。</p>
+<p>在处理赋值语句、方法和参数和算术逻辑表达式时，Java会自动在引用类型和对应原始数据类型之间进行切换。</p>
+<p>自动将一个原始数据类型转换为一个封装类型的操作被称为自动装箱（int -&gt; Integer) , 反过来叫自动拆箱。</p>
+<p><strong>Java的每个基本数据类型都对应一个包装类型</strong></p>
+<h3 id="缓存池"><a href="#缓存池" class="headerlink" title="缓存池"></a>缓存池</h3><p>new Integer(123) 和 Integer.valueOf(123)的区别</p>
 <ul>
-<li>spring-core：支持所有的基础</li>
-<li>spring-aop：</li>
-<li>spring-orm：对象关系映射，比如mybatis</li>
-<li>spring-dao:dao层的支持</li>
-<li>spring-web：webapplicationcontext</li>
-<li>spring-webMVC： JSP等支持</li>
-<li>spring-Context：UI界面支持</li>
+<li>new每次都新建一个对象，这个新建意味着为这个对象分配了独立的内存空间</li>
+<li>而Integer.valueOf(123) ，这个对象使用缓存池（一个已经存储了123这个基础数据类型的对象），对象映射在这个已经创建的对象上，多次调用会一直使用这个对象的引用。</li>
 </ul>
-<h2 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h2><p>spring官网介绍：现代化的java开发——基于Spring 的开发</p>
-<p><img src="https://ice-tongji.oss-cn-beijing.aliyuncs.com/img/image-20210413164508197.png" alt="image-20210413164508197"></p>
-<ul>
-<li>springboot<ul>
-<li>一个快速开发脚手架</li>
-<li>基于springboot可以快速开发单个微服务</li>
-<li>约定大于配置</li>
-</ul>
-</li>
-<li>springcloud<ul>
-<li>基于springboot实现</li>
-</ul>
-</li>
-</ul>
+<p><strong>编译器会在自动装箱过程中调用valueOf()方法</strong></p>
+<p>因此多个值相同且值在缓存池范围内的Integer实例，如果这个Integer对象实例使用的是自动装箱来创建，那么他会使用缓存池内的对象。</p>
 
                 
             </div>
@@ -531,7 +520,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/04/13/Spring%E5%88%9D%E8%A7%81/">http://example.com/2021/04/13/Spring%E5%88%9D%E8%A7%81/</a>
+                    <a href="http://example.com/2021/04/15/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">http://example.com/2021/04/15/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -742,9 +731,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2021/04/15/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
                     <div class="card-image">
@@ -762,9 +752,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -777,6 +767,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -795,13 +786,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/13/%E5%89%91%E6%8C%87Offer47/">
+                <a href="/2021/04/13/Spring%E5%88%9D%E8%A7%81/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="剑指Offer47">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Spring初见">
                         
-                        <span class="card-title">剑指Offer47</span>
+                        <span class="card-title">Spring初见</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -818,8 +809,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/leetcode/" class="post-category">
-                                    leetcode
+                            <a href="/categories/Spring/" class="post-category">
+                                    Spring
                                 </a>
                             
                             
