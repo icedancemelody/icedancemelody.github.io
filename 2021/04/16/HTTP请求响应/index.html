@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java数据类型, Icedancemelody">
+    <meta name="keywords" content="HTTP请求响应, Icedancemelody">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java数据类型 | Icedancemelody</title>
+    <title>HTTP请求响应 | Icedancemelody</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java数据类型</h1>
+                    <h1 class="description center-align post-title">HTTP请求响应</h1>
                 </div>
             </div>
         </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/JavaBasic/" class="post-category">
-                                JavaBasic
+                            <a href="/categories/HTTP/" class="post-category">
+                                HTTP
                             </a>
                         
                     </div>
@@ -456,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-04-15
+                    2021-04-16
                 </div>
                 
 
@@ -477,23 +477,105 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Java数据类型"><a href="#Java数据类型" class="headerlink" title="Java数据类型"></a>Java数据类型</h2><p>数据类型是指一组值和一组对这些值操作的<strong>集合</strong>。在Java中分为原始数据类型，和引用数据类型。</p>
-<h3 id="原始数据类型"><a href="#原始数据类型" class="headerlink" title="原始数据类型"></a>原始数据类型</h3><p>比如说：int（32位），float（单精度32位），double（双精度64位），boolean（表示一位 ，只有两个值0，char（16位Unicode字符），byte（8位），short（16位），long(64位)。</p>
-<p>java编程中，主要使用class构造引用类型，这种风格也叫面向对象编程，对象——保存了某个数据类型的的值的实体。通过此 ，你还可以自己定义自己的数据类型来抽象任意对象。</p>
-<p>抽象数据类型ADT是一种能够对使用者隐藏数据表示的数据类型。（就是自己写类，定义自己的成员数据和对应API，这种类对使用者透明，只需要提供API即可）。</p>
-<h3 id="包装数据类型"><a href="#包装数据类型" class="headerlink" title="包装数据类型"></a>包装数据类型</h3><p>Java的自动装箱和自动拆箱机制：</p>
-<p>类型参数必须被实例化为引用类型，Java有一种特殊机制，可以让泛型代码能够处理原始数据类型。</p>
-<p>Java的封装类型都是<strong>原始数据类型所对应的引用数据类型</strong>，比如Integer——int。一般在数组初始化定义类型，使用Integer而不是用int。</p>
-<p>在处理赋值语句、方法和参数和算术逻辑表达式时，Java会自动在引用类型和对应原始数据类型之间进行切换。</p>
-<p>自动将一个原始数据类型转换为一个封装类型的操作被称为自动装箱（int -&gt; Integer) , 反过来叫自动拆箱。</p>
-<p><strong>Java的每个基本数据类型都对应一个包装类型</strong></p>
-<h3 id="缓存池"><a href="#缓存池" class="headerlink" title="缓存池"></a>缓存池</h3><p>new Integer(123) 和 Integer.valueOf(123)的区别</p>
+                <h1 id="HTTP请求—相应报文"><a href="#HTTP请求—相应报文" class="headerlink" title="HTTP请求—相应报文"></a>HTTP请求—相应报文</h1><p>网页请求中，客户端发送HTTP请求报文，服务器解析报文，响应相应的返回值和数据组成的报文。</p>
+<h2 id="请求报文的结构"><a href="#请求报文的结构" class="headerlink" title="请求报文的结构"></a>请求报文的结构</h2><ol>
+<li>请求方法，URL，协议版本</li>
+<li>接下来的多行都是请求首部Header：包含首部名称和对应值</li>
+<li>一个空行分开Header和Body</li>
+<li>请求内容主体</li>
+</ol>
+<h2 id="相应报文的结构"><a href="#相应报文的结构" class="headerlink" title="相应报文的结构"></a>相应报文的结构</h2><ol>
+<li><p>协议版本，状态码，描述（描述状态码代表的信息）</p>
+</li>
+<li><p>接下来多行是首部内容（首部名称——对应值）</p>
+</li>
+<li><p>空行</p>
+</li>
+<li><p>相应内容主体</p>
+</li>
+</ol>
 <ul>
-<li>new每次都新建一个对象，这个新建意味着为这个对象分配了独立的内存空间</li>
-<li>而Integer.valueOf(123) ，这个对象使用缓存池（一个已经存储了123这个基础数据类型的对象），对象映射在这个已经创建的对象上，多次调用会一直使用这个对象的引用。</li>
+<li>这两种报文的首部Header是由多行（首部名称：值）排列而成的，每一行都是一个独立的首部，对应独立的值。</li>
+<li>请求报文第一行包含的URL，协议版本，请求方法是重点需要关注的内容。</li>
+<li>相应报文的协议版本和状态码</li>
 </ul>
-<p><strong>编译器会在自动装箱过程中调用valueOf()方法</strong></p>
-<p>因此多个值相同且值在缓存池范围内的Integer实例，如果这个Integer对象实例使用的是自动装箱来创建，那么他会使用缓存池内的对象。</p>
+<h2 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h2><p>URL全称：Uniform Resource Locator，又名统一资源定位符。与他关系密切的名词URI（Uniform Resource Identifier) 统一资源标识符。URI包含URL，URL在URI的基础上增加了定位能力（找到资源具体位置）。URI还包含URN（Uniform Resource Name）统一资源名称，顾名思义它只是个名字。</p>
+<p><img src="https://ice-tongji.oss-cn-beijing.aliyuncs.com/img/image-20210416082336813.png" alt="image-20210416082336813"></p>
+<h2 id="HTTP方法"><a href="#HTTP方法" class="headerlink" title="HTTP方法"></a>HTTP方法</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GET</td>
+<td>获取资源</td>
+</tr>
+<tr>
+<td>HEAD</td>
+<td>和GET方法类似，但不返回内容主体部分</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>传输实体主体（主要用来传输资源，GET是获取）</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>上传文件，没有权限限制，存在安全性问题，一般不用</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>修改资源，但只能部分修改，会将原始资源完全被请求包含的修改资源替代</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>和PUT相反，删除文件，同样没有权限机制</td>
+</tr>
+<tr>
+<td>OPTIONS</td>
+<td>查询指定URL支持的方法</td>
+</tr>
+<tr>
+<td>CONNECT</td>
+<td>建立链接隧道，使用SSL和TLS协议把通信内容加密</td>
+</tr>
+<tr>
+<td>TRACE</td>
+<td>追踪路径，服务器会将通信路径返回</td>
+</tr>
+</tbody></table>
+<p>GET和POST的区别</p>
+<ul>
+<li>GET一般是向服务器请求资源，POST把数据发送到后台使用</li>
+<li>GET和POST都能使用额外参数，GET放在URL中，POST放在内容主体中。URL仅仅支持ASCII码，所以如果GET请求参数有中文，需要先编码，空格也是一样</li>
+<li>GET安全POST不安全，GET安全因为它不会改变服务器的状态，但POST会改变，每一次POST请求会在服务器放上一条记录。</li>
+<li>GET方法本身可以缓存，POST不能缓存</li>
+</ul>
+<h2 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h2><p>状态码的职责是当客户端向服务器端发送请求时，描述返回的请求结果。借助状态码，用户可以直到服务器端是正常处理了请求，还是出现了错误。</p>
+<ul>
+<li>1XX （临时响应）表示临时响应并需要请求者继续执行操作的状态代码。</li>
+<li>2XX    Success（成功状态码）    请求正常处理完毕<ul>
+<li>200 OK：请求已正常处理</li>
+<li>206 Partial Content：是对资源某一部分的请求，该状态码表示客户端进行了范围请求，而服务器成功执行了这部分的GET请求。响应报文中包含由Content-Range指定范围的实体内容。</li>
+</ul>
+</li>
+<li>3XX    Redirection（重定向状态码）    需要进行附加操作以完成请求</li>
+<li>4XX    Client Error（客户端错误状态码）    服务器无法处理请求<ul>
+<li>400 Bad Request：服务器端无法理解客户端发送的请求，请求报文中可能存在语法错误。</li>
+<li>401 Unauthorized：该状态码表示发送的请求需要有通过HTTP认证（BASIC认证，DIGEST认证）的认证信息。</li>
+<li>403 Forbidden：不允许访问那个资源。该状态码表明对请求资源的访问被服务器拒绝了。（权限，未授权IP等）</li>
+<li>404 Not Found：服务器上没有请求的资源。路径错误等。没有发现文件、查询或URl</li>
+</ul>
+</li>
+<li>5XX    Server Error（服务器错误状态码）    服务器处理请求出错<ul>
+<li>500 Internal Server Error：貌似内部资源出故障了。该状态码表明服务器端在执行请求时发生了错误。也有可能是web应用存在bug或某些临时故障。</li>
+<li>501是服务器不支持的请求，无法完成请求</li>
+<li>503 Service Unavailable：抱歉，我现在正在忙着。该状态码表明服务器暂时处于超负载或正在停机维护，现在无法处理请求。 通常，这只是暂时状态。</li>
+<li>505时服务器不支持请求的HTTP协议版本，无法完成处理</li>
+</ul>
+</li>
+</ul>
 
                 
             </div>
@@ -520,7 +602,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/04/15/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">http://example.com/2021/04/15/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</a>
+                    <a href="http://example.com/2021/04/16/HTTP%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94/">http://example.com/2021/04/16/HTTP%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -731,9 +813,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2021/04/16/HTTP%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94/">
                     <div class="card-image">
@@ -751,9 +834,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -766,6 +849,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -784,13 +868,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/13/Spring%E5%88%9D%E8%A7%81/">
+                <a href="/2021/04/15/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Spring初见">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Java数据类型">
                         
-                        <span class="card-title">Spring初见</span>
+                        <span class="card-title">Java数据类型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -801,14 +885,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-15
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Spring/" class="post-category">
-                                    Spring
+                            <a href="/categories/JavaBasic/" class="post-category">
+                                    JavaBasic
                                 </a>
                             
                             
