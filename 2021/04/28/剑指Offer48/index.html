@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="一些基础概念总结, Icedancemelody">
+    <meta name="keywords" content="剑指Offer48, Icedancemelody">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>一些基础概念总结 | Icedancemelody</title>
+    <title>剑指Offer48 | Icedancemelody</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">一些基础概念总结</h1>
+                    <h1 class="description center-align post-title">剑指Offer48</h1>
                 </div>
             </div>
         </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/JavaBasic/" class="post-category">
-                                JavaBasic
+                            <a href="/categories/leetcode/" class="post-category">
+                                leetcode
                             </a>
                         
                     </div>
@@ -456,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-04-21
+                    2021-04-28
                 </div>
                 
 
@@ -477,62 +477,18 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><h4 id="访问权限修饰符"><a href="#访问权限修饰符" class="headerlink" title="访问权限修饰符"></a>访问权限修饰符</h4><ul>
-<li>private</li>
-<li>protected</li>
-<li>public</li>
-</ul>
-<p>这三个修饰符可以修饰变量，方法，类，接口等。表示程序级别之间的访问权限，如果不加则表示包级之间可以随意访问。</p>
-<ul>
-<li>类可见表示其他类可以用这个类创建实例对象</li>
-<li>成员可见表示其他类可以用这个类的实例对象访问这个成员</li>
-</ul>
-<p>protected用于修饰成员，这个修饰的效果是对于继承它的子类，这些成员可见，而这个修饰符对于修饰类没有效果。</p>
-<h3 id="抽象类和接口"><a href="#抽象类和接口" class="headerlink" title="抽象类和接口"></a>抽象类和接口</h3><p>接口本来是抽象类的延伸，但再JDK 8之前两个概念完全重合，既接口中不能有任何方法的实现。</p>
-<p>然而因为不允许任何方法实现的接口维护成本太高（其实就是如果想要修改一个业务，还得根据接口找到实现类里面去更改）。所以JDK 8之后接口就允许方法实现了。</p>
-<ul>
-<li>JDK 8 接口的成员默认且只能是public</li>
-<li>接口字段默认final或static</li>
-</ul>
-<p><strong>什么时候适合使用接口？</strong></p>
+                <p>本题求“最长”，且最长与次长之间具有充要关系，考虑用动态规划解题。</p>
+<h2 id="动态规划解析："><a href="#动态规划解析：" class="headerlink" title="动态规划解析："></a>动态规划解析：</h2><h3 id="状态定义："><a href="#状态定义：" class="headerlink" title="状态定义："></a>状态定义：</h3><p> 设动态规划列表 dp ，dp[j] 代表以字符 s[j]s[j] 为结尾的 “最长不重复子字符串” 的长度。</p>
+<h3 id="转移方程："><a href="#转移方程：" class="headerlink" title="转移方程："></a>转移方程：</h3><p>固定右边界j,设字符s[j]左边距离最近的相同字符为s[i], 即s[i] =  s[j]。</p>
 <ol>
-<li>需要让许多不相关的类实现同样名字的方法</li>
-<li>需要使用多重继承</li>
+<li>i &lt; 0,s[j]左边没字符，dp[j] = dp[j - 1] + 1(初始情况)</li>
+<li>dp[j - 1] &lt; j - i,说明s[i] 在字符串dp[j - 1] 区间之外，则dp[j] = dp[j - 1] +1。这里需要细致讲解一下，其实影响当前字符加入进来的时候是不是最长字符，就看这个新进来的字符到底有没有在已知最长字符串中任何一个重合，那么每次都一个一个遍历肯定很麻烦，所以靠记录的方式看第一次和他相同的字符出现的索引，那么这个索引怎么用呢？靠j - i来判断，我们假设当前最长字符串大小为3，即dp[j - 1] = 3，如果新进来的这个字符(j 索引对应的字符) 正好和当前字符串最前面的一个字符相同，那就出现了重复了，就不能再无脑让长度+1了，这个相同的情况用数学表达式来说就是 j - i = dp[j - 1]。现在能明白为什么j - i &gt; dp[j - 1] 时，可以让最长长度接着+1了吧。</li>
+<li>dp[j - 1] &gt;= j - i。那dp[j] 的左边界由s[i] 决定，即dp[j] = j - i。取j - i 则默认当前值的最大字串要包含j索引的字符，向前取到i索引的字符的后面一个，得到dp[j]。</li>
+<li>但我们要取最大的，所以要比较dp[j - 1]和dp[j]谁更大，把大的作为dp[j]</li>
 </ol>
-<p>在很多情况下，接口优先于抽象类。因为接口没有抽象类严格的类层次结构要求，可以灵活地为一个类添加行为。并且从 Java 8 开始，接口也可以有默认的方法实现，使得修改接口的成本也变的很低。</p>
-<h3 id="重写与重载"><a href="#重写与重载" class="headerlink" title="重写与重载"></a>重写与重载</h3><h4 id="重写（Override）"><a href="#重写（Override）" class="headerlink" title="重写（Override）"></a>重写（Override）</h4><p>在继承体系中，当子类实现一个和父类名字一样的成员方法时，叫做重写。</p>
-<p>重写需要满足以下规则</p>
-<ul>
-<li>子类方法的访问权限必须大于等于父类方法；</li>
-<li>子类方法的返回类型必须是父类方法返回类型或为其子类型。</li>
-<li>子类方法抛出的异常类型必须是父类抛出异常类型或为其子类型。</li>
-</ul>
-<p>使用@Override注解，可以让<strong>编译器检查</strong>是否满足上面的规则</p>
-<h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><p>想要理解反射概念，需要先知道：</p>
-<ul>
-<li>Java中，每个类都有一个class对象，包含与类相关的信息。</li>
-<li>编译时，根据编译的类，产生一个.class文件，文件中就是类包含的对象</li>
-<li>类加载相当于class对象的加载，在第一次使用类时（初始化一个实例），这个类（class）才会动态加载到JVM中。</li>
-</ul>
-<p>反射可以提供运行时的类信息，并且这个类可以在运行时才加载进来，甚至在编译时期该类的 .class 不存在也可以加载进来。</p>
-<h4 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h4><ul>
-<li>可扩展性：应用程序可以创建一个可扩展对象的实例，这个创建方法是利用全限定名，创建这个可扩展对象实例的作用是使用来自外部的用户自定义类</li>
-<li>类浏览器：一个类的浏览器需要可以看到所有类的成员，比如IDE在程序员编写代码时就可以根据反射得到的类信息，编写正确的代码</li>
-<li>调试器：调试器需要检查类私有成员。</li>
-<li>测试工具：测试工具利用反射，自动调用类里定义的可被发现（打开IDE的类能看见的第一层的）API，确保一组测试中有较高的代码覆盖率。</li>
-</ul>
-<h4 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h4><ul>
-<li>性能开销：反射设及动态类型解析，JVM无法对这些代码进行优化。反射操作的效率比那些非反射操作低得多</li>
-<li>安全限制：使用反射技术要求程序运行环境安全。</li>
-<li>内部暴露：反射允许代码执行一些不被允许的操作（比如访问私有属性和方法）。</li>
-</ul>
-<p>上面的这些优缺点由于没有实例会非常难理解，可能以后遇到了真正使用反射的时候才能理解这些。</p>
-<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>Java中定义基类Throwable来表示处理异常抛出情况。分为Error和Exception两种。Error表示JVM无法处理的错误，Exception分两种</p>
-<ul>
-<li>受检：顾名思义，可以被检查到并且修正的异常：常用的try…catch语句的使用。</li>
-<li>非受检：数组越界，除0等可以被识别但是不能被修复的操作，程序直接崩溃，返回的异常。</li>
-</ul>
-<h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><p>集合类的数据类型一个关键特性，我们可以用它们存储任意类型的数据，它被称为泛型。泛型其实很好理解，就是我们的抽象数据类型可以用它们存储任意类型的数据。</p>
+<h3 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h3><p>可以用哈希表来统计各字符最后一次出现的索引位置，这样在遇到新字符的时候直接查表，复杂度很小的同时，还可以更新表和把索引值用来判断，逻辑清晰。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int lengthOfLongestSubstring(String s) &#123;</span><br><span class="line">        Map&lt;Character, Integer&gt; dic &#x3D; new HashMap&lt;&gt;();</span><br><span class="line">        int res &#x3D; 0, tmp &#x3D; 0;</span><br><span class="line">        for(int j &#x3D; 0; j &lt; s.length(); j++) &#123;</span><br><span class="line">            int i &#x3D; dic.getOrDefault(s.charAt(j), -1); &#x2F;&#x2F; 获取索引 i</span><br><span class="line">            dic.put(s.charAt(j), j); &#x2F;&#x2F; 更新哈希表</span><br><span class="line">            tmp &#x3D; tmp &lt; j - i ? tmp + 1 : j - i; &#x2F;&#x2F; dp[j - 1] -&gt; dp[j]</span><br><span class="line">            res &#x3D; Math.max(res, tmp); &#x2F;&#x2F; max(dp[j - 1], dp[j])</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 
                 
             </div>
@@ -559,7 +515,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/04/21/%E4%B8%80%E4%BA%9B%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E6%80%BB%E7%BB%93/">http://example.com/2021/04/21/%E4%B8%80%E4%BA%9B%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E6%80%BB%E7%BB%93/</a>
+                    <a href="http://example.com/2021/04/28/%E5%89%91%E6%8C%87Offer48/">http://example.com/2021/04/28/%E5%89%91%E6%8C%87Offer48/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -770,9 +726,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2021/04/28/%E5%89%91%E6%8C%87Offer48/">
                     <div class="card-image">
@@ -790,9 +747,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -805,6 +762,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -823,13 +781,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/20/%E5%85%B3%E9%94%AE%E5%AD%97final-static/">
+                <a href="/2021/04/21/%E4%B8%80%E4%BA%9B%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E6%80%BB%E7%BB%93/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="关键字final&amp;static">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="一些基础概念总结">
                         
-                        <span class="card-title">关键字final&amp;static</span>
+                        <span class="card-title">一些基础概念总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -840,7 +798,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-21
                             </span>
                         <span class="publish-author">
                             
