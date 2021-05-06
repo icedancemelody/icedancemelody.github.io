@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="剑指Offer48, Icedancemelody">
+    <meta name="keywords" content="剑指Offer49, Icedancemelody">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>剑指Offer48 | Icedancemelody</title>
+    <title>剑指Offer49 | Icedancemelody</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">剑指Offer48</h1>
+                    <h1 class="description center-align post-title">剑指Offer49</h1>
                 </div>
             </div>
         </div>
@@ -456,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-04-28
+                    2021-05-06
                 </div>
                 
 
@@ -477,17 +477,43 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本题求“最长”，且最长与次长之间具有充要关系，考虑用动态规划解题。</p>
-<h2 id="动态规划解析："><a href="#动态规划解析：" class="headerlink" title="动态规划解析："></a>动态规划解析：</h2><h3 id="状态定义："><a href="#状态定义：" class="headerlink" title="状态定义："></a>状态定义：</h3><p> 设动态规划列表 dp ，dp[j] 代表以字符 s[j]s[j] 为结尾的 “最长不重复子字符串” 的长度。</p>
-<h3 id="转移方程："><a href="#转移方程：" class="headerlink" title="转移方程："></a>转移方程：</h3><p>固定右边界j,设字符s[j]左边距离最近的相同字符为s[i], 即s[i] =  s[j]。</p>
-<ol>
-<li>i &lt; 0,s[j]左边没字符，dp[j] = dp[j - 1] + 1(初始情况)</li>
-<li>dp[j - 1] &lt; j - i,说明s[i] 在字符串dp[j - 1] 区间之外，则dp[j] = dp[j - 1] +1。这里需要细致讲解一下，其实影响当前字符加入进来的时候是不是最长字符，就看这个新进来的字符到底有没有在已知最长字符串中任何一个重合，那么每次都一个一个遍历肯定很麻烦，所以靠记录的方式看第一次和他相同的字符出现的索引，那么这个索引怎么用呢？靠j - i来判断，我们假设当前最长字符串大小为3，即dp[j - 1] = 3，如果新进来的这个字符(j 索引对应的字符) 正好和当前字符串最前面的一个字符相同，那就出现了重复了，就不能再无脑让长度+1了，这个相同的情况用数学表达式来说就是 j - i = dp[j - 1]。现在能明白为什么j - i &gt; dp[j - 1] 时，可以让最长长度接着+1了吧。</li>
-<li>dp[j - 1] &gt;= j - i。那dp[j] 的左边界由s[i] 决定，即dp[j] = j - i。取j - i 则默认当前值的最大字串要包含j索引的字符，向前取到i索引的字符的后面一个，得到dp[j]。</li>
-<li>但我们要取最大的，所以要比较dp[j - 1]和dp[j]谁更大，把大的作为dp[j]</li>
+                <p>本题要找对应序号的丑数。</p>
+<p>因为丑数的性质为<strong>只</strong>包含质因子为2或3或5的数。</p>
+<p>可以显然得出，”丑数 = 某较小丑数 * 某因子“</p>
+<p>则可以使用动态规划来完成递推。</p>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>若有已知长度为n的丑数序列x1~xn，求第n+1个丑数，那么这个丑数必须得刚刚好比xn大，这意味着他需要在被生成之前与周围可能争夺这个丑数位置的值进行比较。当然，首先他一定是这么生成的：</p>
+<ul>
+<li>xn+1 = xa x 2</li>
+<li>xn+1 = xb x 3</li>
+<li>xn+1 = xc x 5 </li>
+</ul>
+<p>首先根据上面的逻辑，他应该是这三个值中最小的一个，则xN+1 = </p>
+<p>min(xa, xb, xc)。</p>
+<p>那么，如何确保之后的值在x2,x3,x5之后，一定比xn+1大呢，万一出现了xn+1生成之后，xa x 2的丑数值钻进了xn 和 xn+1之间，就会得到错误的结果，所以还需要顺带判断一下。</p>
+<p>我们可以将这个判断卡在xa , xb, xc本身上，具体如下：</p>
+<p><img src="https://ice-tongji.oss-cn-beijing.aliyuncs.com/img/image-20210506184523194.png" alt="image-20210506184523194"></p>
+<h2 id="动态规划解析"><a href="#动态规划解析" class="headerlink" title="动态规划解析"></a>动态规划解析</h2><ul>
+<li>状态定义：规定动态规划列表dp，dp[i] 代表 i + 1个丑数</li>
+<li>转移方程： <ol>
+<li>索引a, b, c 位置正确时，取上述最小值</li>
+<li>每次计算完成后，都需要更新索引位置，独立判断dp[i] 和 dp[a] x 2，dp[b] x 3, dp[c] x 5的大小关系，若相等则将对应索引a,b,c+1。这里相等才+1的原因是，首先dp[i] 一定是最小的一个，并且它由之前的这三个值中的某一个生成，他一定会与其中一个相等，而这个索引必须前移不然没有可能再通过x2/x3/x5 来完成新的丑数生成。</li>
+<li>递推的时候，已经保证了xn + 1是最接近xn的，只需要更新索引来完成递推必要条件</li>
 </ol>
-<h3 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h3><p>可以用哈希表来统计各字符最后一次出现的索引位置，这样在遇到新字符的时候直接查表，复杂度很小的同时，还可以更新表和把索引值用来判断，逻辑清晰。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int lengthOfLongestSubstring(String s) &#123;</span><br><span class="line">        Map&lt;Character, Integer&gt; dic &#x3D; new HashMap&lt;&gt;();</span><br><span class="line">        int res &#x3D; 0, tmp &#x3D; 0;</span><br><span class="line">        for(int j &#x3D; 0; j &lt; s.length(); j++) &#123;</span><br><span class="line">            int i &#x3D; dic.getOrDefault(s.charAt(j), -1); &#x2F;&#x2F; 获取索引 i</span><br><span class="line">            dic.put(s.charAt(j), j); &#x2F;&#x2F; 更新哈希表</span><br><span class="line">            tmp &#x3D; tmp &lt; j - i ? tmp + 1 : j - i; &#x2F;&#x2F; dp[j - 1] -&gt; dp[j]</span><br><span class="line">            res &#x3D; Math.max(res, tmp); &#x2F;&#x2F; max(dp[j - 1], dp[j])</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+<li> 初始状态：dp[0] = 1,第一个丑数为1</li>
+<li>返回值：dp[n - 1] 即返回第 n 个丑数</li>
+</ul>
+<p><strong>复杂度分析</strong></p>
+<ul>
+<li>时间复杂度O(N) ，其中N = n,因为遍历次数与n相同</li>
+<li>空间复杂度O(N) ,dp数组的额外空间</li>
+</ul>
+<p><strong>代码</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int nthUglyNumber(int n) &#123;</span><br><span class="line">        int a &#x3D; 0, b &#x3D; 0, c &#x3D; 0;</span><br><span class="line">        int[] dp &#x3D; new int[n];</span><br><span class="line">        dp[0] &#x3D; 1;</span><br><span class="line">        for(int i &#x3D; 1; i &lt; n; i++) &#123;</span><br><span class="line">            int n2 &#x3D; dp[a] * 2, n3 &#x3D; dp[b] * 3, n5 &#x3D; dp[c] * 5;</span><br><span class="line">            dp[i] &#x3D; Math.min(Math.min(n2, n3), n5);</span><br><span class="line">            if(dp[i] &#x3D;&#x3D; n2) a++;</span><br><span class="line">            if(dp[i] &#x3D;&#x3D; n3) b++;</span><br><span class="line">            if(dp[i] &#x3D;&#x3D; n5) c++;</span><br><span class="line">        &#125;</span><br><span class="line">        return dp[n - 1];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
 
 
                 
@@ -515,7 +541,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/04/28/%E5%89%91%E6%8C%87Offer48/">http://example.com/2021/04/28/%E5%89%91%E6%8C%87Offer48/</a>
+                    <a href="http://example.com/2021/05/06/%E5%89%91%E6%8C%87Offer49/">http://example.com/2021/05/06/%E5%89%91%E6%8C%87Offer49/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -726,9 +752,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2021/05/06/%E5%89%91%E6%8C%87Offer49/">
                     <div class="card-image">
@@ -746,9 +773,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -761,6 +788,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -779,13 +807,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/21/%E4%B8%80%E4%BA%9B%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E6%80%BB%E7%BB%93/">
+                <a href="/2021/04/28/%E5%89%91%E6%8C%87Offer48/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="一些基础概念总结">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="剑指Offer48">
                         
-                        <span class="card-title">一些基础概念总结</span>
+                        <span class="card-title">剑指Offer48</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -796,14 +824,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-28
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JavaBasic/" class="post-category">
-                                    JavaBasic
+                            <a href="/categories/leetcode/" class="post-category">
+                                    leetcode
                                 </a>
                             
                             
