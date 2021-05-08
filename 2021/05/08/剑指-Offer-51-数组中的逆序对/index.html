@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="剑指Offer49, Icedancemelody">
+    <meta name="keywords" content="剑指 Offer 51. 数组中的逆序对, Icedancemelody">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>剑指Offer49 | Icedancemelody</title>
+    <title>剑指 Offer 51. 数组中的逆序对 | Icedancemelody</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">剑指Offer49</h1>
+                    <h1 class="description center-align post-title">剑指 Offer 51. 数组中的逆序对</h1>
                 </div>
             </div>
         </div>
@@ -456,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-05-06
+                    2021-05-08
                 </div>
                 
 
@@ -477,43 +477,29 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>本题要找对应序号的丑数。</p>
-<p>因为丑数的性质为<strong>只</strong>包含质因子为2或3或5的数。</p>
-<p>可以显然得出，”丑数 = 某较小丑数 * 某因子“</p>
-<p>则可以使用动态规划来完成递推。</p>
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>若有已知长度为n的丑数序列x1~xn，求第n+1个丑数，那么这个丑数必须得刚刚好比xn大，这意味着他需要在被生成之前与周围可能争夺这个丑数位置的值进行比较。当然，首先他一定是这么生成的：</p>
-<ul>
-<li>xn+1 = xa x 2</li>
-<li>xn+1 = xb x 3</li>
-<li>xn+1 = xc x 5 </li>
-</ul>
-<p>首先根据上面的逻辑，他应该是这三个值中最小的一个，则xN+1 = </p>
-<p>min(xa, xb, xc)。</p>
-<p>那么，如何确保之后的值在x2,x3,x5之后，一定比xn+1大呢，万一出现了xn+1生成之后，xa x 2的丑数值钻进了xn 和 xn+1之间，就会得到错误的结果，所以还需要顺带判断一下。</p>
-<p>我们可以将这个判断卡在xa , xb, xc本身上，具体如下：</p>
-<p><img src="https://ice-tongji.oss-cn-beijing.aliyuncs.com/img/image-20210506184523194.png" alt="image-20210506184523194"></p>
-<h2 id="动态规划解析"><a href="#动态规划解析" class="headerlink" title="动态规划解析"></a>动态规划解析</h2><ul>
-<li>状态定义：规定动态规划列表dp，dp[i] 代表 i + 1个丑数</li>
-<li>转移方程： <ol>
-<li>索引a, b, c 位置正确时，取上述最小值</li>
-<li>每次计算完成后，都需要更新索引位置，独立判断dp[i] 和 dp[a] x 2，dp[b] x 3, dp[c] x 5的大小关系，若相等则将对应索引a,b,c+1。这里相等才+1的原因是，首先dp[i] 一定是最小的一个，并且它由之前的这三个值中的某一个生成，他一定会与其中一个相等，而这个索引必须前移不然没有可能再通过x2/x3/x5 来完成新的丑数生成。</li>
-<li>递推的时候，已经保证了xn + 1是最接近xn的，只需要更新索引来完成递推必要条件</li>
-</ol>
-</li>
-<li> 初始状态：dp[0] = 1,第一个丑数为1</li>
-<li>返回值：dp[n - 1] 即返回第 n 个丑数</li>
-</ul>
-<p><strong>复杂度分析</strong></p>
-<ul>
-<li>时间复杂度O(N) ，其中N = n,因为遍历次数与n相同</li>
-<li>空间复杂度O(N) ,dp数组的额外空间</li>
-</ul>
-<p><strong>代码</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int nthUglyNumber(int n) &#123;</span><br><span class="line">        int a &#x3D; 0, b &#x3D; 0, c &#x3D; 0;</span><br><span class="line">        int[] dp &#x3D; new int[n];</span><br><span class="line">        dp[0] &#x3D; 1;</span><br><span class="line">        for(int i &#x3D; 1; i &lt; n; i++) &#123;</span><br><span class="line">            int n2 &#x3D; dp[a] * 2, n3 &#x3D; dp[b] * 3, n5 &#x3D; dp[c] * 5;</span><br><span class="line">            dp[i] &#x3D; Math.min(Math.min(n2, n3), n5);</span><br><span class="line">            if(dp[i] &#x3D;&#x3D; n2) a++;</span><br><span class="line">            if(dp[i] &#x3D;&#x3D; n3) b++;</span><br><span class="line">            if(dp[i] &#x3D;&#x3D; n5) c++;</span><br><span class="line">        &#125;</span><br><span class="line">        return dp[n - 1];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+                <p>本题想求一个数组中包含的逆序对个数。</p>
+<p>逆序对的定义为:如果数组中索引靠前的元素大于索引靠后的元素，那么它们构成一个逆序对。</p>
+<p>暴力解法很好想，每一个数都查询后面的数是否小于它即可，这样的复杂度为O(n^2)，本题数组长度最大可能有50000，说明这样的复杂度不能被接收，考虑如何优化。这里的方式非常巧妙，利用了分治的思想。</p>
+<p>以<strong>归并排序</strong>为主要解题方式。</p>
+<h2 id="归并排序思路"><a href="#归并排序思路" class="headerlink" title="归并排序思路"></a>归并排序思路</h2><p>归并排序的核心效果是，归并之前的子数组都分别有序。算法的思路为，在正常归并排序的过程中，归并时顺带统计逆序对的个数。</p>
+<p>首先需要理解原理，为什么可以在归并时统计逆序对的个数？假设现在有两个大小为4的数组，它们要合并为大小为8的。</p>
+<p>【1 4 7 8】 【2 3 5 6】</p>
+<p>   我们知道，在归并排序过程中，最开始，会有两个指针（假设为i , j)分别指向这两个子数组的首部，即指向1，2 .,并且创建一个等大空间用来存储它们俩的归并结果。</p>
+<p>如果a[i] &lt; b[j] （此时：1，2）。我们知道，b[j]是右边数组最小的元素，所以a[i]永远不会构成逆序对。则向归并数组中加入a[i]，并让i++.</p>
+<p>若a[i] &gt; b[j] （此时：4，2）。我们知道，<strong>a[i] 是左边数组最小的元素，所以a[i] 及a[i]之后的所有元素都与b[j] 构成逆序对</strong>，这时，我们统计逆序对个数，然后照常让b[j] 加入归并数组，再让j++。其实，这时的逆序对个数即为i到数组a末尾元素的个数。</p>
+<p>当然，如果i 和 j其中有一个先到达了终点，之后的归并便不用比较。这两个判断可以在所有判断语句之前。</p>
+<h2 id="算法核心"><a href="#算法核心" class="headerlink" title="算法核心"></a>算法核心</h2><p>在j被归并到数组时，计算i到子数组末尾的元素个数，作为逆序对个数即可。</p>
+<p><strong>分</strong>：从数组N不断递归二分数组，直到分到每个数组大小为1时停止。mergeSort函数的参数为数组头指针和数组尾指针。初始的调用语句为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mergeSort(0,nums.length - 1);</span><br></pre></td></tr></table></figure>
 
-
-
-
+<p>在递归函数中，第一句代码永远是判断终止条件，这里的条件是当左指针&gt;=右指针。因为每次递归的参数改变为(l + r) / 2;所以当r = l + 1时,参数值为1 + 0 = 1 = r。则表示递归终止。</p>
+<p>之后紧接着的代码为递归的划分，然后递归的调用函数本身。</p>
+<p>再接的代码才是递归函数的处理，也就是合并部分：</p>
+<p><strong>合</strong>：合并阶段，首先复制需要合并的数组内容，作为辅助数组的值。这个思路是以原来的输入数组作为最终归并结果，辅助数组作为值判断依据。</p>
+<p>为了代码美观，不统计逆序对的判断单列出来，统计的放在else语句中。</p>
+<h2 id="复杂度分析"><a href="#复杂度分析" class="headerlink" title="复杂度分析"></a>复杂度分析</h2><p>时间复杂度：O（NlogN)。因为第一次划分需要logN的时间，之后归并需要分别扫描所有的元素，需要N的时间。</p>
+<p>空间复杂度：O（N）。一个辅助数组来存储归并结果。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    int[] nums, tmp;</span><br><span class="line">    public int reversePairs(int[] nums) &#123;</span><br><span class="line">        this.nums &#x3D; nums;</span><br><span class="line">        tmp &#x3D; new int[nums.length];</span><br><span class="line">        return mergeSort(0, nums.length - 1);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    private int mergeSort(int m, int n) &#123;</span><br><span class="line">        &#x2F;&#x2F;终止条件</span><br><span class="line">        if(m &gt;&#x3D; n) return 0;</span><br><span class="line">        &#x2F;&#x2F;递归划分</span><br><span class="line">        int mid &#x3D; (m + n)&#x2F;2;</span><br><span class="line">        int res &#x3D; mergeSort(m, mid) + mergeSort(mid + 1, n);</span><br><span class="line">        &#x2F;&#x2F;合并处理</span><br><span class="line">        int i &#x3D; m, j &#x3D; mid + 1;</span><br><span class="line">        &#x2F;&#x2F;初始化tmp</span><br><span class="line">        for(int k &#x3D; m; k &lt;&#x3D; n; k++) &#123;</span><br><span class="line">            tmp[k] &#x3D; nums[k];</span><br><span class="line">        &#125;</span><br><span class="line">        for(int k &#x3D; m; k &lt;&#x3D; n; k++) &#123;</span><br><span class="line">            if(i &#x3D;&#x3D; mid + 1) &#123;</span><br><span class="line">               nums[k] &#x3D; tmp[j++];</span><br><span class="line">            &#125;</span><br><span class="line">            else if(j &#x3D;&#x3D; n + 1 || tmp[i] &lt;&#x3D; tmp[j]) &#123;</span><br><span class="line">               nums[k] &#x3D; tmp[i++];</span><br><span class="line">            &#125;</span><br><span class="line">            else&#123;</span><br><span class="line">                nums[k] &#x3D; tmp[j++];</span><br><span class="line">                res +&#x3D; mid - i + 1; &#x2F;&#x2F;统计逆序对</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
                 
@@ -541,7 +527,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/05/06/%E5%89%91%E6%8C%87Offer49/">http://example.com/2021/05/06/%E5%89%91%E6%8C%87Offer49/</a>
+                    <a href="http://example.com/2021/05/08/%E5%89%91%E6%8C%87-Offer-51-%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9/">http://example.com/2021/05/08/%E5%89%91%E6%8C%87-Offer-51-%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -752,9 +738,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2021/05/08/%E5%89%91%E6%8C%87-Offer-51-%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%80%86%E5%BA%8F%E5%AF%B9/">
                     <div class="card-image">
@@ -772,9 +759,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -787,6 +774,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -805,13 +793,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/28/%E5%89%91%E6%8C%87Offer48/">
+                <a href="/2021/05/06/%E5%89%91%E6%8C%87Offer49/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="剑指Offer48">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="剑指Offer49">
                         
-                        <span class="card-title">剑指Offer48</span>
+                        <span class="card-title">剑指Offer49</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -822,7 +810,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-06
                             </span>
                         <span class="publish-author">
                             
