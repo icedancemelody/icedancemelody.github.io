@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Icedancemelody.blog</title>
+  
+  <subtitle>毁灭吧，累了</subtitle>
+  <link href="http://icedancemelody.com/atom.xml" rel="self"/>
+  
+  <link href="http://icedancemelody.com/"/>
+  <updated>2021-07-06T01:20:42.439Z</updated>
+  <id>http://icedancemelody.com/</id>
+  
+  <author>
+    <name>icedancemelody</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JMM &amp; volatile</title>
+    <link href="http://icedancemelody.com/2021/07/06/jmm-volatile/"/>
+    <id>http://icedancemelody.com/2021/07/06/jmm-volatile/</id>
+    <published>2021-07-05T23:05:51.000Z</published>
+    <updated>2021-07-06T01:20:42.439Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JMM-amp-volatile&quot;&gt;&lt;a href=&quot;#JMM-amp-volatile&quot; class=&quot;headerlink&quot; title=&quot;JMM &amp;amp; volatile&quot;&gt;&lt;/a&gt;JMM &amp;amp; volatile&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Java多线程" scheme="http://icedancemelody.com/categories/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+    
+    <category term="volatile" scheme="http://icedancemelody.com/tags/volatile/"/>
+    
+    <category term="JMM" scheme="http://icedancemelody.com/tags/JMM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多线程基础</title>
+    <link href="http://icedancemelody.com/2021/06/16/duo-xian-cheng-ji-chu/"/>
+    <id>http://icedancemelody.com/2021/06/16/duo-xian-cheng-ji-chu/</id>
+    <published>2021-06-16T02:22:15.000Z</published>
+    <updated>2021-07-06T01:33:23.857Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;多线程基础&quot;&gt;&lt;a href=&quot;#多线程基础&quot; class=&quot;headerlink&quot; title=&quot;多线程基础&quot;&gt;&lt;/a&gt;多线程基础&lt;/h1&gt;&lt;h2 id=&quot;使用线程&quot;&gt;&lt;a href=&quot;#使用线程&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Java多线程" scheme="http://icedancemelody.com/categories/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+    
+    <category term="Java多线程" scheme="http://icedancemelody.com/tags/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java集合ConcurrentHashMap</title>
+    <link href="http://icedancemelody.com/2021/06/09/concurrenthashmap/"/>
+    <id>http://icedancemelody.com/2021/06/09/concurrenthashmap/</id>
+    <published>2021-06-09T12:55:15.000Z</published>
+    <updated>2021-07-06T01:24:39.165Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JDK1-7的ConcurrentHashMap&quot;&gt;&lt;a href=&quot;#JDK1-7的ConcurrentHashMap&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaBasic" scheme="http://icedancemelody.com/categories/JavaBasic/"/>
+    
+    
+    <category term="Java集合" scheme="http://icedancemelody.com/tags/Java%E9%9B%86%E5%90%88/"/>
+    
+    <category term="ConcurrentHashMap" scheme="http://icedancemelody.com/tags/ConcurrentHashMap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java集合LinkedHashMap</title>
+    <link href="http://icedancemelody.com/2021/06/07/linkedhashmap/"/>
+    <id>http://icedancemelody.com/2021/06/07/linkedhashmap/</id>
+    <published>2021-06-07T08:41:15.000Z</published>
+    <updated>2021-07-06T01:28:42.658Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;LinkedHashMap&quot;&gt;&lt;a href=&quot;#LinkedHashMap&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaBasic" scheme="http://icedancemelody.com/categories/JavaBasic/"/>
+    
+    
+    <category term="Java集合" scheme="http://icedancemelody.com/tags/Java%E9%9B%86%E5%90%88/"/>
+    
+    <category term="LinkedHashMap" scheme="http://icedancemelody.com/tags/LinkedHashMap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java集合HashMap</title>
+    <link href="http://icedancemelody.com/2021/06/03/hashmap/"/>
+    <id>http://icedancemelody.com/2021/06/03/hashmap/</id>
+    <published>2021-06-03T02:22:15.000Z</published>
+    <updated>2021-07-06T01:20:32.002Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;HashMap&quot;&gt;&lt;a href=&quot;#HashMap&quot; class=&quot;headerlink&quot; title=&quot;HashMap&quot;&gt;&lt;/a&gt;HashMap&lt;/h1&gt;&lt;h2 id=&quot;概览&quot;&gt;&lt;a href=&quot;#概览&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaBasic" scheme="http://icedancemelody.com/categories/JavaBasic/"/>
+    
+    
+    <category term="HashMap" scheme="http://icedancemelody.com/tags/HashMap/"/>
+    
+    <category term="Java集合" scheme="http://icedancemelody.com/tags/Java%E9%9B%86%E5%90%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java集合LinkedList</title>
+    <link href="http://icedancemelody.com/2021/05/16/linkedlist/"/>
+    <id>http://icedancemelody.com/2021/05/16/linkedlist/</id>
+    <published>2021-05-16T02:55:54.000Z</published>
+    <updated>2021-07-06T01:29:10.719Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;LinkedList&quot;&gt;&lt;a href=&quot;#LinkedList&quot; class=&quot;headerlink&quot; title=&quot;LinkedList&quot;&gt;&lt;/a&gt;LinkedList&lt;/h1&gt;&lt;h2 id=&quot;概览&quot;&gt;&lt;a href=&quot;#概览&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaBasic" scheme="http://icedancemelody.com/categories/JavaBasic/"/>
+    
+    
+    <category term="Java集合" scheme="http://icedancemelody.com/tags/Java%E9%9B%86%E5%90%88/"/>
+    
+    <category term="LinkedList" scheme="http://icedancemelody.com/tags/LinkedList/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java集合ArrayList</title>
+    <link href="http://icedancemelody.com/2021/05/15/arraylist/"/>
+    <id>http://icedancemelody.com/2021/05/15/arraylist/</id>
+    <published>2021-05-15T02:22:54.000Z</published>
+    <updated>2021-07-06T01:25:16.413Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ArrayList&quot;&gt;&lt;a href=&quot;#ArrayList&quot; class=&quot;headerlink&quot; title=&quot;ArrayList&quot;&gt;&lt;/a&gt;ArrayList&lt;/h1&gt;&lt;h2 id=&quot;概览&quot;&gt;&lt;a href=&quot;#概览&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaBasic" scheme="http://icedancemelody.com/categories/JavaBasic/"/>
+    
+    
+    <category term="Java集合" scheme="http://icedancemelody.com/tags/Java%E9%9B%86%E5%90%88/"/>
+    
+    <category term="ArrayList" scheme="http://icedancemelody.com/tags/ArrayList/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>剑指 Offer 51. 数组中的逆序对</title>
+    <link href="http://icedancemelody.com/2021/05/08/jian-zhi-offer-51-shu-zu-zhong-de-ni-xu-dui/"/>
+    <id>http://icedancemelody.com/2021/05/08/jian-zhi-offer-51-shu-zu-zhong-de-ni-xu-dui/</id>
+    <published>2021-05-08T13:09:49.000Z</published>
+    <updated>2021-07-06T01:35:02.740Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本题想求一个数组中包含的逆序对个数。&lt;/p&gt;
+&lt;p&gt;逆序对的定义为:如果数组中索引靠前的元素大于索引靠后的元素，那么它们构成一个逆序对。&lt;/p&gt;
+&lt;p&gt;暴力解法很好想，每一个数都查询后面的数是否小于它即可，这样的复杂度为O(n^2)，本题数组长度最大可能有50000，说明这</summary>
+        
+      
+    
+    
+    
+    <category term="leetcode" scheme="http://icedancemelody.com/categories/leetcode/"/>
+    
+    
+    <category term="DataStructure" scheme="http://icedancemelody.com/tags/DataStructure/"/>
+    
+    <category term="题解" scheme="http://icedancemelody.com/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>剑指Offer49</title>
+    <link href="http://icedancemelody.com/2021/05/06/jian-zhi-offer49/"/>
+    <id>http://icedancemelody.com/2021/05/06/jian-zhi-offer49/</id>
+    <published>2021-05-06T11:01:35.000Z</published>
+    <updated>2021-07-06T01:34:49.361Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本题要找对应序号的丑数。&lt;/p&gt;
+&lt;p&gt;因为丑数的性质为&lt;strong&gt;只&lt;/strong&gt;包含质因子为2或3或5的数。&lt;/p&gt;
+&lt;p&gt;可以显然得出，”丑数 = 某较小丑数 * 某因子“&lt;/p&gt;
+&lt;p&gt;则可以使用动态规划来完成递推。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="leetcode" scheme="http://icedancemelody.com/categories/leetcode/"/>
+    
+    
+    <category term="DataStructure" scheme="http://icedancemelody.com/tags/DataStructure/"/>
+    
+    <category term="题解" scheme="http://icedancemelody.com/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>剑指Offer48</title>
+    <link href="http://icedancemelody.com/2021/04/28/jian-zhi-offer48/"/>
+    <id>http://icedancemelody.com/2021/04/28/jian-zhi-offer48/</id>
+    <published>2021-04-28T11:48:56.000Z</published>
+    <updated>2021-07-06T01:46:20.406Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本题求“最长”，且最长与次长之间具有充要关系，考虑用动态规划解题。&lt;/p&gt;
+&lt;h2 id=&quot;动态规划解析：&quot;&gt;&lt;a href=&quot;#动态规划解析：&quot; class=&quot;headerlink&quot; title=&quot;动态规划解析：&quot;&gt;&lt;/a&gt;动态规划解析：&lt;/h2&gt;&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="leetcode" scheme="http://icedancemelody.com/categories/leetcode/"/>
+    
+    
+    <category term="DataStructure" scheme="http://icedancemelody.com/tags/DataStructure/"/>
+    
+    <category term="题解" scheme="http://icedancemelody.com/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一些基础概念总结</title>
+    <link href="http://icedancemelody.com/2021/04/21/yi-xie-ji-chu-gai-nian-zong-jie/"/>
+    <id>http://icedancemelody.com/2021/04/21/yi-xie-ji-chu-gai-nian-zong-jie/</id>
+    <published>2021-04-21T06:45:41.000Z</published>
+    <updated>2021-07-06T01:35:47.884Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;继承&quot;&gt;&lt;a href=&quot;#继承&quot; class=&quot;headerlink&quot; title=&quot;继承&quot;&gt;&lt;/a&gt;继承&lt;/h2&gt;&lt;h4 id=&quot;访问权限修饰符&quot;&gt;&lt;a href=&quot;#访问权限修饰符&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaBasic" scheme="http://icedancemelody.com/categories/JavaBasic/"/>
+    
+    
+    <category term="JavaBasic" scheme="http://icedancemelody.com/tags/JavaBasic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关键字final&amp;static</title>
+    <link href="http://icedancemelody.com/2021/04/20/guan-jian-zi-final-static/"/>
+    <id>http://icedancemelody.com/2021/04/20/guan-jian-zi-final-static/</id>
+    <published>2021-04-20T03:07:52.000Z</published>
+    <updated>2021-07-06T01:33:47.642Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;关键字&quot;&gt;&lt;a href=&quot;#关键字&quot; class=&quot;headerlink&quot; title=&quot;关键字&quot;&gt;&lt;/a&gt;关键字&lt;/h2&gt;&lt;h3 id=&quot;final&quot;&gt;&lt;a href=&quot;#final&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaBasic" scheme="http://icedancemelody.com/categories/JavaBasic/"/>
+    
+    
+    <category term="JavaBasic" scheme="http://icedancemelody.com/tags/JavaBasic/"/>
+    
+    <category term="关键字" scheme="http://icedancemelody.com/tags/%E5%85%B3%E9%94%AE%E5%AD%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaString</title>
+    <link href="http://icedancemelody.com/2021/04/17/javastring/"/>
+    <id>http://icedancemelody.com/2021/04/17/javastring/</id>
+    <published>2021-04-17T02:16:54.000Z</published>
+    <updated>2021-07-06T01:27:02.675Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;String&quot;&gt;&lt;a href=&quot;#String&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaBasic" scheme="http://icedancemelody.com/categories/JavaBasic/"/>
+    
+    <category term="Java数据类型" scheme="http://icedancemelody.com/categories/JavaBasic/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+    
+    <category term="String" scheme="http://icedancemelody.com/tags/String/"/>
+    
+    <category term="Java数据类型" scheme="http://icedancemelody.com/tags/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringIOC</title>
+    <link href="http://icedancemelody.com/2021/04/16/springioc/"/>
+    <id>http://icedancemelody.com/2021/04/16/springioc/</id>
+    <published>2021-04-16T10:33:41.000Z</published>
+    <updated>2021-07-06T01:30:44.369Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SpringIOC&quot;&gt;&lt;a href=&quot;#SpringIOC&quot; class=&quot;headerlink&quot; title=&quot;SpringIOC&quot;&gt;&lt;/a&gt;SpringIOC&lt;/h1&gt;&lt;h2 id=&quot;理论推导&quot;&gt;&lt;a href=&quot;#理论推导&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Spring" scheme="http://icedancemelody.com/categories/Spring/"/>
+    
+    
+    <category term="SpringIOC" scheme="http://icedancemelody.com/tags/SpringIOC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>背包队列栈算法4阅读笔记</title>
+    <link href="http://icedancemelody.com/2021/04/16/bei-bao-dui-lie-zhan-suan-fa-4-yue-du-bi-ji/"/>
+    <id>http://icedancemelody.com/2021/04/16/bei-bao-dui-lie-zhan-suan-fa-4-yue-du-bi-ji/</id>
+    <published>2021-04-16T03:20:35.000Z</published>
+    <updated>2021-07-06T01:32:43.126Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;背包，队列和栈都是一种抽象数据类型，数据类型的值是一组对象的集合(这句话的意思是，一个抽象类中的成员变量，其实就是一些数据类型，而这些成员变量便是这个对象的数据类型，即一组对象的集合），所有操作都是关于添加、删除或是访问集合中的对象。&lt;/p&gt;
+&lt;h2 id=&quot;泛型&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="DataStructure" scheme="http://icedancemelody.com/categories/DataStructure/"/>
+    
+    
+    <category term="Algorithm" scheme="http://icedancemelody.com/tags/Algorithm/"/>
+    
+    <category term="DataStructure" scheme="http://icedancemelody.com/tags/DataStructure/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP请求响应</title>
+    <link href="http://icedancemelody.com/2021/04/16/http-qing-qiu-xiang-ying/"/>
+    <id>http://icedancemelody.com/2021/04/16/http-qing-qiu-xiang-ying/</id>
+    <published>2021-04-16T01:13:43.000Z</published>
+    <updated>2021-07-06T01:25:56.970Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;HTTP请求—相应报文&quot;&gt;&lt;a href=&quot;#HTTP请求—相应报文&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="HTTP" scheme="http://icedancemelody.com/categories/HTTP/"/>
+    
+    
+    <category term="HTTP" scheme="http://icedancemelody.com/tags/HTTP/"/>
+    
+    <category term="计算机网络" scheme="http://icedancemelody.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java数据类型</title>
+    <link href="http://icedancemelody.com/2021/04/15/java-shu-ju-lei-xing/"/>
+    <id>http://icedancemelody.com/2021/04/15/java-shu-ju-lei-xing/</id>
+    <published>2021-04-15T08:04:28.000Z</published>
+    <updated>2021-07-06T01:28:23.308Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Java数据类型&quot;&gt;&lt;a href=&quot;#Java数据类型&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaBasic" scheme="http://icedancemelody.com/categories/JavaBasic/"/>
+    
+    
+    <category term="Java数据类型" scheme="http://icedancemelody.com/tags/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring初见</title>
+    <link href="http://icedancemelody.com/2021/04/13/spring-chu-jian/"/>
+    <id>http://icedancemelody.com/2021/04/13/spring-chu-jian/</id>
+    <published>2021-04-13T09:56:37.000Z</published>
+    <updated>2021-07-06T01:31:09.407Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Spring简介&quot;&gt;&lt;a href=&quot;#Spring简介&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Spring" scheme="http://icedancemelody.com/categories/Spring/"/>
+    
+    
+    <category term="Spring" scheme="http://icedancemelody.com/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>剑指Offer47</title>
+    <link href="http://icedancemelody.com/2021/04/13/jian-zhi-offer47/"/>
+    <id>http://icedancemelody.com/2021/04/13/jian-zhi-offer47/</id>
+    <published>2021-04-13T09:55:50.000Z</published>
+    <updated>2021-07-06T01:34:39.113Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;剑指-Offer-47-礼物的最大价值&quot;&gt;&lt;a href=&quot;#剑指-Offer-47-礼物的最大价值&quot; class=&quot;headerlink&quot; title=&quot;剑指 Offer 47. 礼物的最大价值&quot;&gt;&lt;/a&gt;剑指 Offer 47.</summary>
+        
+      
+    
+    
+    
+    <category term="leetcode" scheme="http://icedancemelody.com/categories/leetcode/"/>
+    
+    
+    <category term="DataStructure" scheme="http://icedancemelody.com/tags/DataStructure/"/>
+    
+    <category term="题解" scheme="http://icedancemelody.com/tags/%E9%A2%98%E8%A7%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java方法执行内存分配初探</title>
+    <link href="http://icedancemelody.com/2021/04/13/java-fang-fa-zhi-xing-nei-cun-fen-pei-chu-tan/"/>
+    <id>http://icedancemelody.com/2021/04/13/java-fang-fa-zhi-xing-nei-cun-fen-pei-chu-tan/</id>
+    <published>2021-04-13T09:41:57.000Z</published>
+    <updated>2021-07-06T01:27:57.048Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Java方法执行过程中的内存分配&quot;&gt;&lt;a href=&quot;#Java方法执行过程中的内存分配&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="JavaBasic" scheme="http://icedancemelody.com/categories/JavaBasic/"/>
+    
+    
+    <category term="Java内存" scheme="http://icedancemelody.com/tags/Java%E5%86%85%E5%AD%98/"/>
+    
+  </entry>
+  
+</feed>
