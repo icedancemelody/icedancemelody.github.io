@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Icedancemelody.blog</title>
   
-  <subtitle>毁灭吧，累了</subtitle>
+  <subtitle>你好，陌生人</subtitle>
   <link href="http://icedancemelody.com/atom.xml" rel="self"/>
   
   <link href="http://icedancemelody.com/"/>
-  <updated>2021-07-06T01:20:42.439Z</updated>
+  <updated>2021-07-12T11:23:25.712Z</updated>
   <id>http://icedancemelody.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>操作系统回顾-操作系统概述</title>
+    <link href="http://icedancemelody.com/2021/07/12/cao-zuo-xi-tong-gai-shu/"/>
+    <id>http://icedancemelody.com/2021/07/12/cao-zuo-xi-tong-gai-shu/</id>
+    <published>2021-07-12T11:20:35.000Z</published>
+    <updated>2021-07-12T11:23:25.712Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;操作系统概述&quot;&gt;&lt;a href=&quot;#操作系统概述&quot; class=&quot;headerlink&quot; title=&quot;操作系统概述&quot;&gt;&lt;/a&gt;操作系统概述&lt;/h1&gt;&lt;h2 id=&quot;操作系统的概念&quot;&gt;&lt;a href=&quot;#操作系统的概念&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="操作系统" scheme="http://icedancemelody.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="操作系统" scheme="http://icedancemelody.com/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>JMM &amp; volatile</title>
@@ -526,31 +551,6 @@
     <category term="DataStructure" scheme="http://icedancemelody.com/tags/DataStructure/"/>
     
     <category term="题解" scheme="http://icedancemelody.com/tags/%E9%A2%98%E8%A7%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java方法执行内存分配初探</title>
-    <link href="http://icedancemelody.com/2021/04/13/java-fang-fa-zhi-xing-nei-cun-fen-pei-chu-tan/"/>
-    <id>http://icedancemelody.com/2021/04/13/java-fang-fa-zhi-xing-nei-cun-fen-pei-chu-tan/</id>
-    <published>2021-04-13T09:41:57.000Z</published>
-    <updated>2021-07-06T01:27:57.048Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Java方法执行过程中的内存分配&quot;&gt;&lt;a href=&quot;#Java方法执行过程中的内存分配&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JavaBasic" scheme="http://icedancemelody.com/categories/JavaBasic/"/>
-    
-    
-    <category term="Java内存" scheme="http://icedancemelody.com/tags/Java%E5%86%85%E5%AD%98/"/>
     
   </entry>
   

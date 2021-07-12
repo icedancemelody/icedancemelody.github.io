@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Java集合ArrayList, Icedancemelody.blog">
+    <meta name="keywords" content="操作系统回顾-操作系统概述, Icedancemelody.blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Java集合ArrayList | Icedancemelody.blog</title>
+    <title>操作系统回顾-操作系统概述 | Icedancemelody.blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Java集合ArrayList</h1>
+                    <h1 class="description center-align post-title">操作系统回顾-操作系统概述</h1>
                 </div>
             </div>
         </div>
@@ -434,12 +434,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Java%E9%9B%86%E5%90%88/">
-                                <span class="chip bg-color">Java集合</span>
-                            </a>
-                        
-                            <a href="/tags/ArrayList/">
-                                <span class="chip bg-color">ArrayList</span>
+                            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">操作系统</span>
                             </a>
                         
                     </div>
@@ -450,8 +446,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/JavaBasic/" class="post-category">
-                                JavaBasic
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                操作系统
                             </a>
                         
                     </div>
@@ -463,28 +459,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-15
+                    2021-07-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-06
+                    2021-07-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    6 分
                 </div>
                 
 
@@ -507,171 +503,87 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h1><h2 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h2><ul>
-<li>ArrayList的底层是基于数组实现的，类型为:Object[] elementData</li>
-<li>支持随机访问，意味着查询效率高，增删效率低。</li>
-<li>使用频率很高——正常使用的场景都是用来查询，不涉及频繁的增删。</li>
-<li>线程不安全，与之对应的线程安全集合为vector</li>
-<li>遍历速度也较快，由于内存的连续性，CPU内部缓存结构会缓存连续内存片段，可以大幅降低读取内存的性能开销</li>
-<li>不适合用来做队列的底层数组，因为队列性质：尾部插入，首部删除。这两个操作都需要数组的数据整体搬迁。如果使用定长环型数组可以实现队列。</li>
-<li>可以用来做栈，因为push和pop不涉及多个元素遍历与移动</li>
-<li>将<code>ArrayList</code>作为默认首选,只有因为经常从表中间插入删除而导致性能下降时,才选择<code>LinkedList</code></li>
+                <h1 id="操作系统概述"><a href="#操作系统概述" class="headerlink" title="操作系统概述"></a>操作系统概述</h1><h2 id="操作系统的概念"><a href="#操作系统的概念" class="headerlink" title="操作系统的概念"></a>操作系统的概念</h2><p>操作系统位于计算机的纯硬件之上，应用程序之下，作为它们之间衔接的部分。而用户使用计算机，直接使用的部分是安装在计算机上的应用程序。当然，用户可以直接对操作系统进行交互，比如设置系统的时间。</p>
+<ol>
+<li>操作系统负责管理协调硬件，软件等计算机资源的工作</li>
+<li>为上层的应用程序、用户提供基础服务</li>
+<li>操作系统是系统软件，而不是硬件</li>
+</ol>
+<h2 id="功能和目标"><a href="#功能和目标" class="headerlink" title="功能和目标"></a>功能和目标</h2><p>操作系统主要是按一定规则，协调管理硬件使用，同时因其为系统软件，为上层应用程序以及使用应用程序的用户提供服务，所以他还提供一些便捷的操作方式与图形化的操作界面。</p>
+<p>硬件的管理主要可分为：</p>
+<ol>
+<li>处理机管理</li>
+<li>存储器管理</li>
+<li>文件管理</li>
+<li>设备管理</li>
+</ol>
+<p>提供给用户便捷使用的接口为：</p>
+<ol>
+<li>命令接口（cmd命令行，用户可以在这里通过命令的方式向计算机发起执行某种操作的请求，操作系统对命令进行解析处理，如果命令合法则执行）</li>
+<li>程序接口（应用程序本身依赖于底层的硬件才可以被执行，用户可以通过操作系统提供的程序接口直接在应用层运行程序)</li>
+<li>GUI（图形用户界面）(比如文件移动如果没有操作系统，要几条命令才能完成，但操作系统只需要拖拽就行)</li>
+</ol>
+<p>值得一提的是，命令接口还分联机命令接口和脱机命令接口：</p>
+<p>联机：平常开cmd，用户说一句，系统执行一句</p>
+<p>脱机：bat批处理操作，把需要执行的命令集成起来，让操作系统一次执行全部</p>
+<h2 id="操作系统的特征"><a href="#操作系统的特征" class="headerlink" title="操作系统的特征"></a>操作系统的特征</h2><p>操作系统在按照一定规则实现其功能的过程中，不免有一些出现的比较多的思想，有一些可以概括为:</p>
+<ul>
+<li><p>并发——宏观上同时发生，微观上交替发生</p>
+<p>(以程序来说的话，意思在用户看来，我双击了两个程序，当前CPU有两个程序都在执行中，但其实一个时间点CPU只是在处理一个程序中的指令，另一个只是在等待。)</p>
+</li>
+<li><p>并行——两个或多个事件同一时刻同时发生</p>
+<p>（这是真的在一起执行，比如多核CPU的出现）</p>
+</li>
+<li><p>共享——系统资源共享</p>
+</li>
+<li><p>虚拟——把一个物理实体变成若干个逻辑上的对应物，实体是实际存在的，而虚拟是用户感受到的</p>
+<ol>
+<li><p>虚拟内存：比如一个GTA5想要运行需要4GB内存，而内存还有其他程序要用，那么根据一个程序运行前必须要放进内存，这个内存就必须要被虚拟的方式扩张。</p>
+<p>如果按照以前的方式，一个作业必须要一次性全部装入内存（物理内存）后，才可以开始运行，这样就导致了大作业没法运行（内存不够)。且大量作业要求运行时，内存空间不够让所有程序都被容纳，导致并发度下降（可能CPU是空闲的，但是内存不够，就可惜）。</p>
+<p>而且一旦作业的内容被装入内存，就会一直驻留再内存中，直到作业运行结束。事实上，在一个时间段内只需要有一部分数据被访问就行，如果一次性装入作业所有内容，则内存中很大一部分时间的很大一部分数据都是无用的，这就导致了内存空间被浪费。</p>
+<p>虚拟内存技术的基础：离散内存分配，即进程的逻辑地址空间分散地存储在内存不连续的物理地址空间中，典型的技术有：分段、分页、段页式。</p>
+<p>虚拟内存的基本思想是：每个程序拥有自己的地址空间，这个空间被分割成多个块，每个块被称作一页或页面。每一页有连续的地址范围，这些页被映射到物理内存，但并不是所有的页都必须在内存中才能运行程序。</p>
+<p>最开始被装入物理内存的内容，只是作业当前需要使用的数据和指令 ，其它的内容被暂时放在外存。</p>
+<ul>
+<li>当一个程序执行过程中，所访问的信息不在内存时，由操作系统负责将外存的所需信息调入内存，然后执行之前失败的程序。</li>
+<li>如果内存空间不够，操作系统负责将物理内存中暂时用不到的内容换出到外存，这个“暂时用不到”一般基于LRU思想：最近最久未使用。其实就是把物理内存看作一个高速缓存来实现，只是其他的内容被逻辑映射了可以随时切换。</li>
 </ul>
-<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><ul>
-<li>该类支持快速随机访问。</li>
-<li>数组的默认大小为 10，可扩容</li>
-<li>允许null值</li>
-<li>add()的均摊开销是常数级别，均摊花费为O(1)？</li>
-<li>在分配大量元素前,使用ensureCapacity减少重新分配的次数？</li>
+<p>这样，在操作系统管理下，一个作业的需要装入到内存的内容虽然很多，但是基于局部性原理，操作系统维护下只用了一小部分内存空间就完成了一个很大的内存使用。</p>
+</li>
+<li><p>虚拟文件：</p>
+<p>虚拟文件系统的目的：将接口暴露给用户，屏蔽底层文件系统的差异性，它是对所有不同文件系统的抽象</p>
+<p>它是一种用于网络环境的分布式文件系统，是允许和操作系统使用不同的文件系统实现的接口。虚拟文件系统（VFS）是物理文件系统与服务之间的一个接口层，它对Linux的每个文件系统的所有细节进行抽象，使得不同的文件系统在Linux核心以及系统中运行的其他进程看来，都是相同的。严格说来，VFS并不是一种实际的文件系统。它只存在于内存中，不存在于任何外存空间。VFS在系统启动时建立，在系统关闭时消亡。</p>
+<p>虚拟文件系统的功能： </p>
+<ul>
+<li>提供一致的文件和文件系统接口 </li>
+<li>管理所有文件和文件系统关联的数据结构 </li>
+<li>高效查询例程，遍历文件系统  - 与特定文件系统模块的交互</li>
+<li>与特定文件系统模块的交互</li>
 </ul>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span> <span class="token keyword">extends</span> <span class="token class-name">AbstractList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span>
-        <span class="token keyword">implements</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">E</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span> <span class="token class-name">RandomAccess</span><span class="token punctuation">,</span> <span class="token class-name">Cloneable</span><span class="token punctuation">,</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span>Serializable</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<h3 id="List-lt-Element-gt"><a href="#List-lt-Element-gt" class="headerlink" title="List< Element >"></a>List&lt; Element &gt;</h3><ul>
-<li>声明一些数组操作的通用方法。</li>
+</li>
+<li><p>虚拟处理机：一个程序需要一个CPU来处理，那么多个程序能够同时（并发）运行，就用到了虚拟处理机技术，也叫时分复用技术。</p>
+</li>
+</ol>
+</li>
+<li><p>异步——进程并不是一次运行直接完成，而是运行一段停一段，而在宏观上看它们确实都在运行，这也是并发的一个会出现的情况。</p>
+</li>
 </ul>
-<h3 id="Cloneable"><a href="#Cloneable" class="headerlink" title="Cloneable"></a>Cloneable</h3><p>要重写<code>clone()</code>则必须实现<code>Cloneable</code>的接口,否则会报<code>CloneNotSupportedException </code>异常</p>
-<p><code>Cloneable </code>接口为空,只是个合法调用 <code>clone</code>方法的标识</p>
-<h3 id="RandomAccess"><a href="#RandomAccess" class="headerlink" title="RandomAccess"></a>RandomAccess</h3><ul>
-<li>是一个标志接口，表明实现这个这个接口的 List 集合是支持快速随机访问的。</li>
-<li>如果是实现了这个接口的 List，那么使用for循环的方式获取数据会优于用迭代器获取数据。</li>
+<h2 id="OS的运行机制和体系结构"><a href="#OS的运行机制和体系结构" class="headerlink" title="OS的运行机制和体系结构"></a>OS的运行机制和体系结构</h2><h3 id="运行机制"><a href="#运行机制" class="headerlink" title="运行机制"></a>运行机制</h3><ul>
+<li>两种指令:特权（不允许用户程序使用），非特权</li>
+<li>两种<strong>处理器</strong>状态，用户态和核心态，这两种态可以保证CPU来判断当前指令是否能执行。（用户态不能使用特权指令）</li>
+<li>两种程序：内核程序，应用程序（根据上面的程序划分）</li>
 </ul>
-<h3 id="Serializable"><a href="#Serializable" class="headerlink" title="Serializable"></a>Serializable</h3><p>Serializable接口也为空,只是个合法调用方法的标识目的是实现序列化:可以将一个对象的转换成字节流,写成文件,需要的时候可以从流中再次读取(反序列化)。实现序列化之后的对象,可以通过IO操作进行读写</p>
-<h2 id="操作与源码结合分析"><a href="#操作与源码结合分析" class="headerlink" title="操作与源码结合分析"></a>操作与源码结合分析</h2><h3 id="扩容"><a href="#扩容" class="headerlink" title="扩容"></a>扩容</h3><p>添加元素时使用 <code>ensureCapacityInternal()</code> 方法来保证容量足够，如果不够时，需要使用 grow() 方法进行扩容，新容量的大小为 <code>oldCapacity + (oldCapacity &gt;&gt; 1)</code>，即 <code>oldCapacity+oldCapacity/2</code>。其中 <code>oldCapacity &gt;&gt; 1</code> 需要取整，所以新容量大约是旧容量的 1.5 倍左右。（<code>oldCapacity</code> 为偶数就是 1.5 倍，为奇数就是 1.5 倍-0.5）</p>
-<p>扩容操作需要调用 <code>Arrays.copyOf()</code> 把原数组整个复制到新数组中，这个操作代价很高，因此最好在创建 <code>ArrayList</code> 对象时就指定大概的容量大小，减少扩容操作的次数。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">E</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">//数组元素+1</span>
-    <span class="token function">ensureCapacityInternal</span><span class="token punctuation">(</span>size <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">//底层元素+1位置的索引元素为新元素</span>
-    elementData<span class="token punctuation">[</span>size<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> e<span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">//DEFAULT_CAPACITY就是默认数组大小为10的变量</span>
-<span class="token comment">//数组扩容时，size会+1，作为minCapacity传入下面确认数组容量的函数中</span>
-<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">calculateCapacity</span><span class="token punctuation">(</span><span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span> elementData<span class="token punctuation">,</span> <span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>elementData <span class="token operator">==</span> DEFAULTCAPACITY_EMPTY_ELEMENTDATA<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">return</span> <span class="token class-name">Math</span><span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>DEFAULT_CAPACITY<span class="token punctuation">,</span> minCapacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> minCapacity<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">ensureCapacityInternal</span><span class="token punctuation">(</span><span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">//得到了数组最小容量之后，调用真正让数组扩容的函数</span>
-    <span class="token function">ensureExplicitCapacity</span><span class="token punctuation">(</span><span class="token function">calculateCapacity</span><span class="token punctuation">(</span>elementData<span class="token punctuation">,</span> minCapacity<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">//若当前最大容量大于底层数组的长度，调用grow函数</span>
-<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">ensureExplicitCapacity</span><span class="token punctuation">(</span><span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    modCount<span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token comment">// overflow-conscious code</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>minCapacity <span class="token operator">-</span> elementData<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
-        <span class="token function">grow</span><span class="token punctuation">(</span>minCapacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-
-<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">grow</span><span class="token punctuation">(</span><span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">// 记录原来的数组元素长度</span>
-    <span class="token keyword">int</span> oldCapacity <span class="token operator">=</span> elementData<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-    <span class="token comment">// 新数组长度大概为原元素的1.5倍</span>
-    <span class="token keyword">int</span> newCapacity <span class="token operator">=</span> oldCapacity <span class="token operator">+</span> <span class="token punctuation">(</span>oldCapacity <span class="token operator">&gt;&gt;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">// 若当前计算之后的新数组长度比min小，直接将之前计算的minCapacity作为新的数组元素</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>newCapacity <span class="token operator">-</span> minCapacity <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
-        newCapacity <span class="token operator">=</span> minCapacity<span class="token punctuation">;</span>
-    <span class="token comment">// MAX_ARRAY_SIZE是规定的最大数组长度 MAX_VALUE = 0x7fffffff - 8</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>newCapacity <span class="token operator">-</span> MAX_ARRAY_SIZE <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
-        newCapacity <span class="token operator">=</span> <span class="token function">hugeCapacity</span><span class="token punctuation">(</span>minCapacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">// minCapacity is usually close to size, so this is a win:</span>
-    <span class="token comment">// 将原数组复制到新数组中，就是一个复杂度O（n）的操作，开销很大</span>
-    elementData <span class="token operator">=</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">copyOf</span><span class="token punctuation">(</span>elementData<span class="token punctuation">,</span> newCapacity<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">//如果超过了Max，则只能给予最大的数组长度</span>
-<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">hugeCapacity</span><span class="token punctuation">(</span><span class="token keyword">int</span> minCapacity<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>minCapacity <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">// overflow</span>
-        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">OutOfMemoryError</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token punctuation">(</span>minCapacity <span class="token operator">&gt;</span> MAX_ARRAY_SIZE<span class="token punctuation">)</span> <span class="token operator">?</span>
-        <span class="token class-name">Integer</span><span class="token punctuation">.</span>MAX_VALUE <span class="token operator">:</span>
-    MAX_ARRAY_SIZE<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>需要调用 <code>System.arraycopy() </code>将 index+1 后面的元素都复制到 index 位置上，该操作的时间复杂度为 O(N)，可以看到 ArrayList 删除元素的代价是非常高的。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">E</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token function">rangeCheck</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    modCount<span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token comment">//被删除数组元素</span>
-    <span class="token class-name">E</span> oldValue <span class="token operator">=</span> <span class="token function">elementData</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">//被移动的数组长度</span>
-    <span class="token keyword">int</span> numMoved <span class="token operator">=</span> size <span class="token operator">-</span> index <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>numMoved <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span><span class="token function">arraycopy</span><span class="token punctuation">(</span>elementData<span class="token punctuation">,</span> index<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">,</span> elementData<span class="token punctuation">,</span> index<span class="token punctuation">,</span> numMoved<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">//让索引处值为空（之后会被垃圾回收）</span>
-    elementData<span class="token punctuation">[</span><span class="token operator">--</span>size<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token comment">// clear to let GC do its work</span>
-    <span class="token keyword">return</span> oldValue<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="序列化"><a href="#序列化" class="headerlink" title="序列化"></a>序列化</h3><p><strong>定义</strong></p>
-<p>一般情况下，创建的对象的生命周期在程序终止的时候就终结了。但是，当在程序不运行的情况下需要用到对象信息的时候，就需要用到序列化。序列化是将一个对象转换成为一个字节序列，该字节序列随后可以写入磁盘或者在网络中传输，最后在需要的时候能够将这个字节序列恢复成为原来的对象。</p>
-<p><strong>数组序列化</strong></p>
-<p>数组的序列化就是将数组的数据转化为字符串，以便传递和数据库存储。而对应的反序列化就是将字符串的数据转化成为数组数据了。</p>
-<p>序列化对应的函数为 <code>serialize()</code>, 反序列化对应的函数为：<code>unserialize() </code>。可以将前者序列化之后的数据存到数据库的某个字段中，使用时再通过反序列化处理。</p>
-<p><code>ArrayList </code>基于数组实现，并且具有动态扩容特性，因此保存元素的数组不一定都会被使用，那么就没必要全部进行序列化。</p>
-<p>保存元素的数组 <code>elementData </code>使用 transient 修饰，该关键字声明数组<strong>默认</strong>不会被序列化。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">transient</span> <span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span> elementData<span class="token punctuation">;</span> <span class="token comment">// non-private to simplify nested class access</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p><code>ArrayList </code>实现了 <code>writeObject()</code> 和 <code>readObject()</code> 来控制只序列化数组中有元素填充那部分内容。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">readObject</span><span class="token punctuation">(</span><span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span>ObjectInputStream</span> s<span class="token punctuation">)</span>
-    <span class="token keyword">throws</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span>IOException</span><span class="token punctuation">,</span> <span class="token class-name">ClassNotFoundException</span> <span class="token punctuation">{</span>
-    elementData <span class="token operator">=</span> EMPTY_ELEMENTDATA<span class="token punctuation">;</span>
-
-    <span class="token comment">// Read in size, and any hidden stuff</span>
-    s<span class="token punctuation">.</span><span class="token function">defaultReadObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token comment">// Read in capacity</span>
-    s<span class="token punctuation">.</span><span class="token function">readInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ignored</span>
-
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>size <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment">// be like clone(), allocate array based upon size not capacity</span>
-        <span class="token function">ensureCapacityInternal</span><span class="token punctuation">(</span>size<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-        <span class="token class-name">Object</span><span class="token punctuation">[</span><span class="token punctuation">]</span> a <span class="token operator">=</span> elementData<span class="token punctuation">;</span>
-        <span class="token comment">// Read in all elements in the proper order.</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>size<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">readObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">writeObject</span><span class="token punctuation">(</span><span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span>ObjectOutputStream</span> s<span class="token punctuation">)</span>
-    <span class="token keyword">throws</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span>IOException</span><span class="token punctuation">{</span>
-    <span class="token comment">// Write out element count, and any hidden stuff</span>
-    <span class="token keyword">int</span> expectedModCount <span class="token operator">=</span> modCount<span class="token punctuation">;</span>
-    s<span class="token punctuation">.</span><span class="token function">defaultWriteObject</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token comment">// Write out size as capacity for behavioural compatibility with clone()</span>
-    s<span class="token punctuation">.</span><span class="token function">writeInt</span><span class="token punctuation">(</span>size<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token comment">// Write out all elements in the proper order.</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>size<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        s<span class="token punctuation">.</span><span class="token function">writeObject</span><span class="token punctuation">(</span>elementData<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>modCount <span class="token operator">!=</span> expectedModCount<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ConcurrentModificationException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>序列化时需要使用 <code>ObjectOutputStream</code> 的 <code>writeObject()</code> 将对象转换为字节流并输出。而 <code>writeObject() </code>方法在传入的对象存在 <code>writeObject()</code> 的时候会去反射调用该对象的 <code>writeObject() </code>来实现序列化。反序列化使用的是 <code>ObjectInputStream</code> 的 <code>readObject()</code> 方法，原理类似。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token class-name">ArrayList</span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name">ObjectOutputStream</span> oos <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ObjectOutputStream</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">FileOutputStream</span><span class="token punctuation">(</span>file<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-oos<span class="token punctuation">.</span><span class="token function">writeObject</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h3 id="Fail-Fast"><a href="#Fail-Fast" class="headerlink" title="Fail-Fast"></a>Fail-Fast</h3><p>对于错误情况的快速反应</p>
-<p>源码中有不少操作是<code>modCount++</code></p>
-<p><code>modCount</code> 用来记录 <code>ArrayList</code> 结构发生变化的次数。结构发生变化是指添加或者删除至少一个元素的所有操作，或者是调整内部数组的大小，仅仅只是设置元素的值不算结构发生变化。</p>
-<p>在进行序列化或者迭代等操作时，需要比较操作前后 <code>modCount</code>是否改变，如果改变了需要抛出 <code>ConcurrentModificationException</code>。代码参考上节序列化中的 <code>writeObject()</code> 方法。</p>
+<h3 id="操作系统内核"><a href="#操作系统内核" class="headerlink" title="操作系统内核"></a>操作系统内核</h3><ul>
+<li>时钟管理（实现计时间功能）</li>
+<li>中断处理（处理中断的能力）</li>
+<li>原语（有一些程序指令步骤是不能继续拆分的，操作系统需要规定这样的原语并保证执行正确）</li>
+<li>资源管理——进程、存储器、设备（调度算法、内存管理方法、文件管理、获取外部设备分配资源等）</li>
+</ul>
+<h3 id="操作系统体系结构"><a href="#操作系统体系结构" class="headerlink" title="操作系统体系结构"></a>操作系统体系结构</h3><ul>
+<li>大内核</li>
+<li>微内核</li>
+</ul>
+<p>结构细分程度。</p>
 
                 
             </div>
@@ -698,7 +610,7 @@ oos<span class="token punctuation">.</span><span class="token function">writeObj
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://icedancemelody.com/2021/05/15/arraylist/">http://icedancemelody.com/2021/05/15/arraylist/</a>
+                    <a href="http://icedancemelody.com/2021/07/12/cao-zuo-xi-tong-gai-shu/">http://icedancemelody.com/2021/07/12/cao-zuo-xi-tong-gai-shu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -736,12 +648,8 @@ oos<span class="token punctuation">.</span><span class="token function">writeObj
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Java%E9%9B%86%E5%90%88/">
-                                    <span class="chip bg-color">Java集合</span>
-                                </a>
-                            
-                                <a href="/tags/ArrayList/">
-                                    <span class="chip bg-color">ArrayList</span>
+                                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">操作系统</span>
                                 </a>
                             
                         </div>
@@ -913,17 +821,18 @@ oos<span class="token punctuation">.</span><span class="token function">writeObj
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/05/16/linkedlist/">
+                <a href="/2021/07/12/cao-zuo-xi-tong-gai-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Java集合LinkedList">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="操作系统回顾-操作系统概述">
                         
-                        <span class="card-title">Java集合LinkedList</span>
+                        <span class="card-title">操作系统回顾-操作系统概述</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -933,30 +842,27 @@ oos<span class="token punctuation">.</span><span class="token function">writeObj
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-05-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JavaBasic/" class="post-category">
-                                    JavaBasic
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    操作系统
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Java%E9%9B%86%E5%90%88/">
-                        <span class="chip bg-color">Java集合</span>
-                    </a>
-                    
-                    <a href="/tags/LinkedList/">
-                        <span class="chip bg-color">LinkedList</span>
+                    <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">操作系统</span>
                     </a>
                     
                 </div>
@@ -970,13 +876,13 @@ oos<span class="token punctuation">.</span><span class="token function">writeObj
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/08/jian-zhi-offer-51-shu-zu-zhong-de-ni-xu-dui/">
+                <a href="/2021/07/06/jmm-volatile/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="剑指 Offer 51. 数组中的逆序对">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="JMM &amp; volatile">
                         
-                        <span class="card-title">剑指 Offer 51. 数组中的逆序对</span>
+                        <span class="card-title">JMM &amp; volatile</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -987,14 +893,14 @@ oos<span class="token punctuation">.</span><span class="token function">writeObj
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/leetcode/" class="post-category">
-                                    leetcode
+                            <a href="/categories/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="post-category">
+                                    Java多线程
                                 </a>
                             
                             
@@ -1004,12 +910,12 @@ oos<span class="token punctuation">.</span><span class="token function">writeObj
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/DataStructure/">
-                        <span class="chip bg-color">DataStructure</span>
+                    <a href="/tags/volatile/">
+                        <span class="chip bg-color">volatile</span>
                     </a>
                     
-                    <a href="/tags/%E9%A2%98%E8%A7%A3/">
-                        <span class="chip bg-color">题解</span>
+                    <a href="/tags/JMM/">
+                        <span class="chip bg-color">JMM</span>
                     </a>
                     
                 </div>
