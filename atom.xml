@@ -6,7 +6,7 @@
   <link href="http://icedancemelody.com/atom.xml" rel="self"/>
   
   <link href="http://icedancemelody.com/"/>
-  <updated>2021-07-12T11:23:25.712Z</updated>
+  <updated>2021-07-13T09:10:41.069Z</updated>
   <id>http://icedancemelody.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>操作系统回顾-进程管理</title>
+    <link href="http://icedancemelody.com/2021/07/13/jin-cheng-guan-li/"/>
+    <id>http://icedancemelody.com/2021/07/13/jin-cheng-guan-li/</id>
+    <published>2021-07-13T09:20:12.000Z</published>
+    <updated>2021-07-13T09:10:41.069Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;中断和异常&quot;&gt;&lt;a href=&quot;#中断和异常&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="操作系统" scheme="http://icedancemelody.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="操作系统" scheme="http://icedancemelody.com/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="进程" scheme="http://icedancemelody.com/tags/%E8%BF%9B%E7%A8%8B/"/>
+    
+    <category term="线程" scheme="http://icedancemelody.com/tags/%E7%BA%BF%E7%A8%8B/"/>
+    
+    <category term="中断" scheme="http://icedancemelody.com/tags/%E4%B8%AD%E6%96%AD/"/>
+    
+    <category term="死锁" scheme="http://icedancemelody.com/tags/%E6%AD%BB%E9%94%81/"/>
+    
+  </entry>
   
   <entry>
     <title>操作系统回顾-操作系统概述</title>
@@ -524,33 +557,6 @@
     
     
     <category term="Spring" scheme="http://icedancemelody.com/tags/Spring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>剑指Offer47</title>
-    <link href="http://icedancemelody.com/2021/04/13/jian-zhi-offer47/"/>
-    <id>http://icedancemelody.com/2021/04/13/jian-zhi-offer47/</id>
-    <published>2021-04-13T09:55:50.000Z</published>
-    <updated>2021-07-06T01:34:39.113Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;剑指-Offer-47-礼物的最大价值&quot;&gt;&lt;a href=&quot;#剑指-Offer-47-礼物的最大价值&quot; class=&quot;headerlink&quot; title=&quot;剑指 Offer 47. 礼物的最大价值&quot;&gt;&lt;/a&gt;剑指 Offer 47.</summary>
-        
-      
-    
-    
-    
-    <category term="leetcode" scheme="http://icedancemelody.com/categories/leetcode/"/>
-    
-    
-    <category term="DataStructure" scheme="http://icedancemelody.com/tags/DataStructure/"/>
-    
-    <category term="题解" scheme="http://icedancemelody.com/tags/%E9%A2%98%E8%A7%A3/"/>
     
   </entry>
   
