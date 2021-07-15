@@ -6,7 +6,7 @@
   <link href="http://icedancemelody.com/atom.xml" rel="self"/>
   
   <link href="http://icedancemelody.com/"/>
-  <updated>2021-07-13T10:47:12.839Z</updated>
+  <updated>2021-07-15T03:30:29.945Z</updated>
   <id>http://icedancemelody.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>操作系统回顾-内存管理</title>
+    <link href="http://icedancemelody.com/2021/07/15/nei-cun-guan-li/"/>
+    <id>http://icedancemelody.com/2021/07/15/nei-cun-guan-li/</id>
+    <published>2021-07-15T03:29:12.000Z</published>
+    <updated>2021-07-15T03:30:29.945Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;内存管理&quot;&gt;&lt;a href=&quot;#内存管理&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="操作系统" scheme="http://icedancemelody.com/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="操作系统" scheme="http://icedancemelody.com/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    <category term="内存管理" scheme="http://icedancemelody.com/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>操作系统回顾-进程管理</title>
@@ -532,31 +559,6 @@
     
     
     <category term="Java数据类型" scheme="http://icedancemelody.com/tags/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring初见</title>
-    <link href="http://icedancemelody.com/2021/04/13/spring-chu-jian/"/>
-    <id>http://icedancemelody.com/2021/04/13/spring-chu-jian/</id>
-    <published>2021-04-13T09:56:37.000Z</published>
-    <updated>2021-07-06T01:31:09.407Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Spring简介&quot;&gt;&lt;a href=&quot;#Spring简介&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Spring" scheme="http://icedancemelody.com/categories/Spring/"/>
-    
-    
-    <category term="Spring" scheme="http://icedancemelody.com/tags/Spring/"/>
     
   </entry>
   

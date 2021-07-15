@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JavaString, Icedancemelody.blog">
+    <meta name="keywords" content="操作系统回顾-内存管理, Icedancemelody.blog">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JavaString | Icedancemelody.blog</title>
+    <title>操作系统回顾-内存管理 | Icedancemelody.blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -313,12 +313,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JavaString</h1>
+                    <h1 class="description center-align post-title">操作系统回顾-内存管理</h1>
                 </div>
             </div>
         </div>
@@ -434,12 +434,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/String/">
-                                <span class="chip bg-color">String</span>
+                            <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">操作系统</span>
                             </a>
                         
-                            <a href="/tags/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-                                <span class="chip bg-color">Java数据类型</span>
+                            <a href="/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+                                <span class="chip bg-color">内存管理</span>
                             </a>
                         
                     </div>
@@ -450,12 +450,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/JavaBasic/" class="post-category">
-                                JavaBasic
-                            </a>
-                        
-                            <a href="/categories/JavaBasic/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="post-category">
-                                Java数据类型
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                操作系统
                             </a>
                         
                     </div>
@@ -467,28 +463,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-17
+                    2021-07-15
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-06
+                    2021-07-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    911
+                    3.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    12 分
                 </div>
                 
 
@@ -511,59 +507,144 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>Java中的String比较特殊，与它密切相关的还有StringBuilder和StringBuffer两种类。</p>
-<h3 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h3><p>String类被声明为final，因此它不可被继承。而Integer等包装类也不能被继承，他们之间有共同的设计思路。</p>
+                <h1 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h1><p>操作系统对内存管理可以归纳为以下几点：</p>
 <ul>
-<li>在Java 8 中，String包装了一个声明final的char型数组，来存储字符数据</li>
-<li>在Java 9 中，String类的实现改用声明为final的byte数组存储，并规定编码规则</li>
-</ul>
-<p>其实这两个数组被声明为final就意味着，如果对象被创建，则内部数组值固定不能再引用其他数组，同时String类内部也没有提供改变数组的方法，这样保证了String<strong>不可变</strong>。</p>
-<h3 id="String，StringBuffer和StringBuilder"><a href="#String，StringBuffer和StringBuilder" class="headerlink" title="String，StringBuffer和StringBuilder"></a>String，StringBuffer和StringBuilder</h3><ol>
-<li>可变性<ul>
-<li>String不可变</li>
-<li>StringBuffer和StringBuilder可变（所以一般想要修改一个字符串的值，先将他转化为同值的StringBuffer或StringBuilder，更改值之后再转回来）。</li>
+<li><p>操作系统负责内存空间的分配和回收</p>
+<p>比如一个进程创建之后需要被分配内存资源，分配的方式需要被管理，同时进程消亡时已分配的内存资源需要回收，该如何回收。</p>
+</li>
+<li><p>操作系统需要提供某种技术从逻辑上对内存空间进行扩充</p>
+<p>主要说的是虚拟内存技术</p>
+</li>
+<li><p>操作系统需要提供地址转换功能，负责程序的逻辑地址、物理地址的转换</p>
+</li>
+<li><p>操作系统需要提供内存保护功能。保证各进程在各自存储空间下运行，互不干扰</p>
+<p>比如一个进程在创建之后，如果想访问操作系统或其他进程已经占有的内存空间，这样的行为应该被阻止。实现内存屏障。可以采用两种方法：</p>
+<ul>
+<li>在CPU中设置一对上、下限寄存器，存放进程的上下限地址。进程的指令需要访问某个地址时，CPU检查是否越界</li>
+<li>重定位寄存器(基址寄存器)和界地址寄存器（限长寄存器）进行越界检查。重定位寄存器中存放的是进程的物理地址，界地址寄存器中存放的是进程的最大逻辑地址。</li>
 </ul>
 </li>
-<li>线程安全<ul>
-<li>String不可变，因此线程安全</li>
-<li>StringBuilder不安全（可变但没有加锁）</li>
-<li>StringBuffer线程安全，内部使用synchronized进行同步</li>
 </ul>
+<h2 id="内存空间的分配与回收"><a href="#内存空间的分配与回收" class="headerlink" title="内存空间的分配与回收"></a>内存空间的分配与回收</h2><h3 id="连续分配管理"><a href="#连续分配管理" class="headerlink" title="连续分配管理"></a>连续分配管理</h3><h4 id="单一连续分配"><a href="#单一连续分配" class="headerlink" title="单一连续分配"></a>单一连续分配</h4><p>内存被分为系统区和用户区，系统区通常位于内存的低地址部分，内存中只能有一道用户程序，用程序独占整个用户区空间。</p>
+<p>虽然没有外部碎片也很简单，但明显浪费一堆用户区内存空间，而且一次内存只能运行一个程序，所以是早期技术。</p>
+<h4 id="固定分区分配"><a href="#固定分区分配" class="headerlink" title="固定分区分配"></a>固定分区分配</h4><p>计算机发展慢慢出现了多道程序，内存中需要同时存在多个进程一起执行，于是基于之前的思想，就把用户区以固定大小分区成了多个，每一个进程就放入一个固定分区中。</p>
+<p>固定分区可以分局情况分为分区大小相等和不等两种方法，用于解决不同的场景。</p>
+<p>需要建立分区说明表的数据结构，存储分区号，大小，起始地址，分配状态的信息。</p>
+<p>虽然实现简单，但是最大的问题就是固定分区一定会出现内存内部碎片，这些碎片难以管理，使内存利用率低。还会出现如果我们的所有分区都没法满足一个进程的运行，则就需要覆盖技术。</p>
+<h4 id="动态分区分配"><a href="#动态分区分配" class="headerlink" title="动态分区分配"></a>动态分区分配</h4><p>为了提高内存利用率，就有了动态分区分配，这种分配方式不会预先划分内存分区，而是在进程装入内存时，根据进程大小动态建立分区，使分区大小正好适合进程所需空间。</p>
+<p>动态分区分配主要考虑三个问题：</p>
+<ul>
+<li><p>系统要用什么样的数据结构记录内存的使用情况?</p>
+<p>使用空闲分区表，空闲分区链</p>
 </li>
-</ol>
-<p>除了线程安全之外，String的不可变还有哪些好处？</p>
+<li><p>当很多个空闲分区都能满足需求时，应该选择哪个分区进行分配?</p>
+<p>四种算法：</p>
 <ol>
-<li>可以缓存hash值<ul>
-<li>因为String 的hash值经常被使用，比如HashMap中的String可以被作为key，不可变的特性使hash值也不可变，因此只需要一次计算</li>
-</ul>
-</li>
-<li>StringPool使用条件<ul>
-<li>StringPool可以对那些已经被创建过的String对象创建引用，如果String变了，引用将失效。</li>
-</ul>
-</li>
-<li>安全性<ul>
-<li>String经常作为参数。比如网络链接参数，如果String可变，那么在链接过程中String改变，改变String 的一方会认为连接了其他主机。</li>
-</ul>
-</li>
-<li>线程安全<ul>
-<li>多个线程同时访问不会出现脏写脏读等并发问题</li>
-</ul>
-</li>
+<li>首次适应：从头开始，选第一个能满足的（普通链表）</li>
+<li>最佳适应：优先使用较小的内存空间，如果每一次都查找最小的空间复杂度高，所以维护一个类似于优先队列的数据结构，让链表头部一直都是较小的内存空间分区。</li>
+<li>最坏适应：上面的方法会产生小碎片，所以选最大的。</li>
+<li>领近适应：保留上次查找位置，下次也从上次的指针处开始查找。</li>
 </ol>
-<h3 id="何为StringPool？为什么要创建它？"><a href="#何为StringPool？为什么要创建它？" class="headerlink" title="何为StringPool？为什么要创建它？"></a>何为StringPool？为什么要创建它？</h3><p>StringPool是字符串常量池，保存着所有<strong>字符串字面量</strong>（literal strings）,这些字面量在编译时就确定了，我们可以通过intern()方法，将自己创建的字符串添加到String Pool中。</p>
-<p>intern()方法的执行逻辑是，执行时，查询已有StringPool中是否有等值存储，命中则返回其引用。若不命中则将本字符串加入其中，并返回这个新引用。</p>
-<p>StringPool存在原因：</p>
+</li>
+<li><p>如何进行分区的分配与回收操作?</p>
+<p>分配：主要修改分区大小，起始地址，和空闲状态</p>
+<p>回收：回收时，如果当前区域前后任意空闲空间，则两个空闲空间合并，更改空闲分区大小和起始地址。</p>
+</li>
+</ul>
+<h3 id="离散分配管理"><a href="#离散分配管理" class="headerlink" title="离散分配管理"></a>离散分配管理</h3><p>基于连续分配产生的问题：</p>
 <ol>
-<li>String对象的不变性，当程序运行过程用到多个相同值的String对象，就不需要新建那么多个同样值的对象，而是传一个值的引用。</li>
-<li>为了节省空间，增加访问速度（如String这样的对象数据类型，其实==比较的是内存地址的值是否相同，比equals()比较字符串值是否相同快（String重写了equal()方法，比较两个字符串对象的值是否相同））。反正String值不可变，比较引用当然比比较值要快的多。</li>
-<li>所有字符串常量都被合并，只占用一个空间</li>
+<li>进程的占用内存空间总是物理连续的</li>
+<li>总是不可避免会产生碎片</li>
 </ol>
-<h3 id="创建一个字符串对象实例"><a href="#创建一个字符串对象实例" class="headerlink" title="创建一个字符串对象实例"></a>创建一个字符串对象实例</h3><p>如果执行String s = new String(“abc”);这种方式一共会创建两个字符串对象，前提是String Pool中还没有”abc“字符串对象。</p>
+<p>于是引出离散，逻辑上让一些内存连续在一起，维护指针，这样不仅能保证分配的内存空间不连续，同时也可以防止碎片的产生。</p>
+<h4 id="基本分页"><a href="#基本分页" class="headerlink" title="基本分页"></a>基本分页</h4><p>固定分区分配的非连续分配</p>
+<p>把用户区内存分为若干个大小相等的或不等的分区，每个区就是一个页，根据进程需求取其中几个页，不加连续的用指针的形式分配给这个进程即可。</p>
+<p>主要需要考虑的问题是，如何将连续的物理地址逻辑上映射为非连续的地址，实现物理地址到逻辑地址的转换。</p>
+<p>主要是通过设置偏移量来寻址的。先规定进程的逻辑地址空间分页情况，然后根据分页逻辑地址和偏移量找到实际物理内存地址即可。</p>
+<p><strong>页表</strong></p>
+<p>页表是为了能知道进程在每个页面中内存存放的位置，操作系统为每个进程建立的数据结构。</p>
 <ol>
-<li>”abc“属于字符串字面量，编译时会在StringPool创建一个字符串对象，指向这个”abc“字符串字面量，</li>
-<li>而使用new会在堆中创建一个字符串对象（String类实例）</li>
+<li>一个进程对应一张页表</li>
+<li>进程每一页对应一个页表项</li>
 </ol>
-<p>String构造函数的源码，可以看到将一个字符串对象作为另一个字符串对象构造函数参数时，不会将其字符串的字面量数组复制并传给新的，而是让这两个对象指向同一个数组。</p>
+<h4 id="基本分段"><a href="#基本分段" class="headerlink" title="基本分段"></a>基本分段</h4><p>进程的地址空间：按照程序自身逻辑关系划分为若干个段，每个段都有段名。</p>
+<p>自身逻辑关系指的是，这个进程可能包含几个函数，每个函数就是一个段，主函数也是一个段，以这个思路先把进程需要的内存空间划分为若干个段。</p>
+<p>然后按照一定逻辑转物理的规则去划分。</p>
+<h4 id="段页式"><a href="#段页式" class="headerlink" title="段页式"></a>段页式</h4><p>分段和分页的结合。</p>
+<p>一般两种方法的结合，就是两种方法各有优缺，在我们加入一些限制条件后，就可以尽可能避免两种方法的缺点，同时享受两种方法的优点：</p>
+<p>分页与分段的优缺：</p>
+<p><img src="https://ice-tongji.oss-cn-beijing.aliyuncs.com/img/image-20210715110952873.png" alt="image-20210715110952873"></p>
+<p>所以结合两种方法的具体做法为：</p>
+<p>先分段，再分页。</p>
+<p>先按照逻辑模块将进程需要的内存空间分段，然后再将各段分页。将分好的页面映射内存块中。</p>
+<p><img src="https://ice-tongji.oss-cn-beijing.aliyuncs.com/img/image-20210715111154801.png" alt="image-20210715111154801"></p>
+<h2 id="内存空间的扩充"><a href="#内存空间的扩充" class="headerlink" title="内存空间的扩充"></a>内存空间的扩充</h2><p>早期计算机内存很小，导致程序实际需要的内存空间远大于物理内存，为了让程序正常运行，想出了三种扩充内存的方式：</p>
+<h3 id="覆盖技术"><a href="#覆盖技术" class="headerlink" title="覆盖技术"></a>覆盖技术</h3><p>思想：</p>
+<ul>
+<li>将程序分为多个段（多个模块）。常用的段常驻内存，不常用的段在需要时调入内存。</li>
+<li>内存中分一个固定区和若干个覆盖区</li>
+<li>需要常驻内存的段放在固定区，调入后非运行结束不调出</li>
+<li>不常用的段放在覆盖区，需要用到时调入内存，用不到时调出内存</li>
+</ul>
+<p>举例:</p>
+<p><img src="https://ice-tongji.oss-cn-beijing.aliyuncs.com/img/image-20210715092928266.png" alt="image-20210715092928266"></p>
+<p>这种方式肉眼可见的缺点，这个覆盖结构必须由程序设计人员自己规定，操作系统不可能运行前还要解析一下你的程序结构，只能把结论告诉它，它自动完成覆盖。缺点是对用户不透明，增加了用户编程负担，覆盖技术只用于早期的操作系统中，现在已经成为历史。</p>
+<h3 id="交换技术"><a href="#交换技术" class="headerlink" title="交换技术"></a>交换技术</h3><p>思想：内存空间紧张时，系统将内存中某些进程暂时换出外存，把外存中某些已具备运行条件的进程换入内存（进程在内存与磁盘间动态调度）。</p>
+<p>之前的进程调度中，中级调度其实就是为了实现交换技术，而引发的概念。</p>
+<p>内存中有很多进程在并发运行，运行到某个阶段发现内存不够了，这个时候在操作系统的角度，为了完成所有的运行任务，必须要先让一部分进程不运行，暂时释放他们的内存空间给其他进程使用。等内存空间不紧张了再将他们换入。</p>
+<p>在过程中，换出概念指将进程在内存中占有的寄存器值暂时放在外存存储，被换出的进程的状态为挂起。但需要注意的是，被换出外存的进程的PCB(程序控制块)是常驻内存的，插入到挂起队列中。</p>
+<p>PCB常驻内存的原因是,在进程被换出之后，需要保证我想要再把它从外存调回来的时候，能在外存找到这个进程存放上下文的位置，这些信息需要被放在内存中，不然就断开连接了。</p>
+<h4 id="引出七状态模型"><a href="#引出七状态模型" class="headerlink" title="引出七状态模型"></a>引出七状态模型</h4><p>添加：就绪挂起和阻塞挂起</p>
+<p>如果一个进程在就绪时被换出，则就称为就绪挂起。</p>
+<p>如果一个进程在阻塞时被换出，则就称为阻塞挂起。</p>
+<p><img src="https://ice-tongji.oss-cn-beijing.aliyuncs.com/img/image-20210715095451681.png" alt="image-20210715095451681"></p>
+<h3 id="需要考虑的问题"><a href="#需要考虑的问题" class="headerlink" title="需要考虑的问题"></a>需要考虑的问题</h3><h4 id="换出进程存在外存哪里"><a href="#换出进程存在外存哪里" class="headerlink" title="换出进程存在外存哪里"></a>换出进程存在外存哪里</h4><p>具有对换功能的操作系统中，通常把磁盘空间分为文件区和对换区两部分。文件区主要用于存放文件，主要追求存储空间的利用率，因此对文件区空间的管理采用离散分配方式;对换区空间只占磁盘空间的小部分，被换出的进程数据就存放在对换区。由于对换的速度直接影响到系统的整体速度，因此对换区空间的管理主要追求换入换出速度，因此通常对换区采用连续分配方式（学过文件管理章节后即可理解）。总之，对换区的I/o速度比文件区的更快。</p>
+<h4 id="交换时机"><a href="#交换时机" class="headerlink" title="交换时机"></a>交换时机</h4><p>交换通常在许多进程运行且内存吃紧时进行，而系统负荷降低就暂停。</p>
+<p>比如说许多进程运行时发生内存缺页，说明内存资源紧张。缺页率明显下降就换回。</p>
+<h4 id="换出规则"><a href="#换出规则" class="headerlink" title="换出规则"></a>换出规则</h4><p>优先换出阻塞进程，换出优先级低的进程，可能还会考虑进程在内存中的驻留时间。</p>
+<h3 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h3><p>虚拟内存：比如一个GTA5想要运行需要4GB内存，而内存还有其他程序要用，那么根据一个程序运行前必须要放进内存，这个内存就必须要被虚拟的方式扩张。</p>
+<p>如果按照以前的方式，一个作业必须要一次性全部装入内存（物理内存）后，才可以开始运行，这样就导致了大作业没法运行（内存不够)。且大量作业要求运行时，内存空间不够让所有程序都被容纳，导致并发度下降（可能CPU是空闲的，但是内存不够，就可惜）。</p>
+<p>而且一旦作业的内容被装入内存，就会一直驻留再内存中，直到作业运行结束。事实上，在一个时间段内只需要有一部分数据被访问就行，如果一次性装入作业所有内容，则内存中很大一部分时间的很大一部分数据都是无用的，这就导致了内存空间被浪费。</p>
+<p>虚拟内存技术的基础：离散内存分配，即进程的逻辑地址空间分散地存储在内存不连续的物理地址空间中，典型的技术有：分段、分页、段页式。</p>
+<p>虚拟内存的基本思想是：每个程序拥有自己的地址空间，这个空间被分割成多个块，每个块被称作一页或页面。每一页有连续的地址范围，这些页被映射到物理内存，但并不是所有的页都必须在内存中才能运行程序。</p>
+<p>最开始被装入物理内存的内容，只是作业当前需要使用的数据和指令 ，其它的内容被暂时放在外存。</p>
+<ul>
+<li>当一个程序执行过程中，所访问的信息不在内存时，由操作系统负责将外存的所需信息调入内存，然后执行之前失败的程序。</li>
+<li>如果内存空间不够，操作系统负责将物理内存中暂时用不到的内容换出到外存，这个“暂时用不到”一般基于LRU思想：最近最久未使用。其实就是把物理内存看作一个高速缓存来实现，只是其他的内容被逻辑映射了可以随时切换。</li>
+</ul>
+<p>这样，在操作系统管理下，一个作业的需要装入到内存的内容虽然很多，但是基于局部性原理，操作系统维护下只用了一小部分内存空间就完成了一个很大的内存使用。</p>
+<h1 id="文件管理"><a href="#文件管理" class="headerlink" title="文件管理"></a>文件管理</h1><p>文件：一组有意义的信息/数据的集合</p>
+<ul>
+<li><p>计算机中存放了各种各样的文件，一个文件有什么属性</p>
+</li>
+<li><p>文件内部数据应该如何组织起来</p>
+</li>
+<li><p>文件之间如何组织起来：目录（树的结构）</p>
+</li>
+<li><p>OS提供哪些功能，才能方便用户、应用程序使用文件</p>
+<p>增删改查上面这个树结构（目录），新建文件夹，新建文件，修改文件内容，查找文件读取文件。</p>
+</li>
+<li><p>从上往下看，文件数据应该怎么存放在外存（磁盘）上</p>
+<p>同样，文件数据可以连续的存在磁盘块中，也可以离散的存在磁盘块中，操作系统同样需要管理磁盘空间，避免磁盘碎片等等。</p>
+</li>
+</ul>
+<h2 id="文件属性"><a href="#文件属性" class="headerlink" title="文件属性"></a>文件属性</h2><p>文件名:由创建文件的用户决定文件名，主要是为了方便用户找到文件，同一目录下不允许有重名文件。</p>
+<p>标识符:一个系统内的各文件标识符唯一，对用户来说毫无可读性，因此标识符只是操作系统用于区分各个文件的一种内部名称。</p>
+<p>类型:指明文件的类型</p>
+<p>位置:文件存放的路径（让用户使用)、在外存中的地址（操作系统使用，对用户不可见）</p>
+<p>大小:指明文件大小</p>
+<p>创建时间、上次修改时间</p>
+<p>文件所有者信息</p>
+<p>保护信息:对文件进行保护的访问控制信息</p>
+<h2 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h2><ul>
+<li>无结构文件：txt等，一些二进制或者字符流组成</li>
+<li>有结构文件：excel等，结构性较强，记录是一组相关数据项的集合。<ul>
+<li>顺序文件</li>
+<li>索引文件</li>
+<li>索引顺序文件</li>
+</ul>
+</li>
+</ul>
 
                 
             </div>
@@ -590,7 +671,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://icedancemelody.com/2021/04/17/javastring/">http://icedancemelody.com/2021/04/17/javastring/</a>
+                    <a href="http://icedancemelody.com/2021/07/15/nei-cun-guan-li/">http://icedancemelody.com/2021/07/15/nei-cun-guan-li/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -628,12 +709,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/String/">
-                                    <span class="chip bg-color">String</span>
+                                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">操作系统</span>
                                 </a>
                             
-                                <a href="/tags/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
-                                    <span class="chip bg-color">Java数据类型</span>
+                                <a href="/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+                                    <span class="chip bg-color">内存管理</span>
                                 </a>
                             
                         </div>
@@ -805,17 +886,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/04/20/guan-jian-zi-final-static/">
+                <a href="/2021/07/15/nei-cun-guan-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="关键字final&amp;static">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="操作系统回顾-内存管理">
                         
-                        <span class="card-title">关键字final&amp;static</span>
+                        <span class="card-title">操作系统回顾-内存管理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -825,30 +907,31 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JavaBasic/" class="post-category">
-                                    JavaBasic
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    操作系统
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/JavaBasic/">
-                        <span class="chip bg-color">JavaBasic</span>
+                    <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">操作系统</span>
                     </a>
                     
-                    <a href="/tags/%E5%85%B3%E9%94%AE%E5%AD%97/">
-                        <span class="chip bg-color">关键字</span>
+                    <a href="/tags/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/">
+                        <span class="chip bg-color">内存管理</span>
                     </a>
                     
                 </div>
@@ -862,13 +945,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/16/springioc/">
+                <a href="/2021/07/13/jin-cheng-guan-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="SpringIOC">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="操作系统回顾-进程管理">
                         
-                        <span class="card-title">SpringIOC</span>
+                        <span class="card-title">操作系统回顾-进程管理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -879,14 +962,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-13
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Spring/" class="post-category">
-                                    Spring
+                            <a href="/categories/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="post-category">
+                                    操作系统
                                 </a>
                             
                             
@@ -896,8 +979,24 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/SpringIOC/">
-                        <span class="chip bg-color">SpringIOC</span>
+                    <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                        <span class="chip bg-color">操作系统</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%BF%9B%E7%A8%8B/">
+                        <span class="chip bg-color">进程</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%BA%BF%E7%A8%8B/">
+                        <span class="chip bg-color">线程</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%B8%AD%E6%96%AD/">
+                        <span class="chip bg-color">中断</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%AD%BB%E9%94%81/">
+                        <span class="chip bg-color">死锁</span>
                     </a>
                     
                 </div>
