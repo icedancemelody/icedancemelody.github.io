@@ -6,7 +6,7 @@
   <link href="http://icedancemelody.com/atom.xml" rel="self"/>
   
   <link href="http://icedancemelody.com/"/>
-  <updated>2021-07-15T03:30:29.945Z</updated>
+  <updated>2021-07-15T13:51:52.550Z</updated>
   <id>http://icedancemelody.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计网相关</title>
+    <link href="http://icedancemelody.com/2021/07/15/ji-suan-ji-wang-luo-yi-xie-zong-jie/"/>
+    <id>http://icedancemelody.com/2021/07/15/ji-suan-ji-wang-luo-yi-xie-zong-jie/</id>
+    <published>2021-07-15T13:51:43.000Z</published>
+    <updated>2021-07-15T13:51:52.550Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;HTTP请求—响应报文&quot;&gt;&lt;a href=&quot;#HTTP请求—响应报文&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="HTTP" scheme="http://icedancemelody.com/categories/HTTP/"/>
+    
+    
+    <category term="HTTP" scheme="http://icedancemelody.com/tags/HTTP/"/>
+    
+    <category term="计算机网络" scheme="http://icedancemelody.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="TCP/UDP" scheme="http://icedancemelody.com/tags/TCP-UDP/"/>
+    
+  </entry>
   
   <entry>
     <title>操作系统回顾-内存管理</title>
@@ -534,31 +563,6 @@
     <category term="HTTP" scheme="http://icedancemelody.com/tags/HTTP/"/>
     
     <category term="计算机网络" scheme="http://icedancemelody.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java数据类型</title>
-    <link href="http://icedancemelody.com/2021/04/15/java-shu-ju-lei-xing/"/>
-    <id>http://icedancemelody.com/2021/04/15/java-shu-ju-lei-xing/</id>
-    <published>2021-04-15T08:04:28.000Z</published>
-    <updated>2021-07-06T01:28:23.308Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Java数据类型&quot;&gt;&lt;a href=&quot;#Java数据类型&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="JavaBasic" scheme="http://icedancemelody.com/categories/JavaBasic/"/>
-    
-    
-    <category term="Java数据类型" scheme="http://icedancemelody.com/tags/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
     
   </entry>
   
